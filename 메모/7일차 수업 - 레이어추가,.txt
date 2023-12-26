@@ -1,0 +1,55 @@
+< 포토샵 >
+새 레이어 추가 :ctrl + shift + n
+
+백그라운드 레이어 만듦 -> 이미지 추가 -> 새 레이어 추가 -> 백스라운드 컬러 설정
+-> 배경 설정 후 사진이 위로 보이게 레이어 위로 올림 ->  레이어 마스크 추가 -> 좌측 그라데이션 아이콘 클릭 
+
+2. 부분 영역지우기
+- 레이어 마스크를 씌운 후 선택영역을 통해 부분만 선택 후 delete
+- 지우개 사용도 가능 하지만 위에 방법이 더 쉬움
+
+< 코딩 > - 텍스트 그림자 및 테두리
+<p class="text text1">
+- 스타일에 적을 때 .text1도 되지만 .text.tex1붙여서 적어도 됨
+
+1. 텍스트 
+* 텍스트 테두리
+ "-webkit-text-stork: *xp black" 
+     -> 두께와 컬러 값 작성
+     -> 두께가 두꺼워지면 질 수록 안쪽으로 굵어짐
+     -> 그래서 얇은 두께만들때 사용
+
+* 텍스트 그림자
+- text-shadow: *px *px *px 색
+     -> 텍스트 그림자 작성
+     -> x축 y축 투명도 색
+
+**텍스트 그림자로 텍스트 테두리 설정
+- text-shadow:  -px 0 색, 0 -px 색, *px 0 색, 0 *px 색;
+   -> 바깥으로 테두리 만드는 방법
+
+
+2. 태그 +클래스 보다
+     클래스 + 클래스가 함께 잇는게 우선 순위가 높음
+
+
+3. 배경 이미지 연결
+ㄱ. background- image: url('img/***');
+   -> 글자 위로 이미지 연결
+ㄴ. background-position: **px **px(가로값, 세로값)
+   -> 이미지 위치이동
+   -> left, center, right
+         top, center, botton
+   -> px, %, (음수, 양수)
+ㄷ. background- size : **px **px(가로값, 세로값)
+   -> 이미지 크기
+   -> cover = 영역을 이미지로 덮어서 적용(이미지 일부 잘림) /// contain =  영역의 한쪽만 패워지도록 적용
+   **이미지 반복(background-repeat: repeat- x / repeat-y / no-repeat)
+   - repeat-x : x축 반복
+   - repeat-y : y축 반복
+   - no-repaet : 반복안함
+
+ㄹ. background: url(img/****) x축 y축 / 사이즈 / 반복
+
+ㅁ. backgroubd-attachmentl: fixed'
+ - 이미지 고정 (스크롤을 움직일 때마다 그림 달라ㅣㅈ 

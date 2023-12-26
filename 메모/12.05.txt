@@ -1,0 +1,74 @@
+12.05 수업
+
+
+pc 웹사이트 캔퍼스크기  : 1920px
+ - 컨테이너 크기(정해져있지는 않음)
+  
+<< 웹사이트 만드는 법 >>
+--->홈페이지 제작시에는 검정보다는 #333(짙은 회색)을 사용하여 홈페이지 제작
+body 태그 안에 div id="" 작성 후 header작성으로 나눠서 시작
+-------------------------------------
+<header class="">
+            <h1>
+                      <a href="">로고</a>
+           </h1>
+	
+           <nav> **1차 메뉴 작성하는 법(홈페이지 메뉴 중 마우스를 올리기 전에 보여지는 메뉴)
+                      <ul>
+                                 <LI><A href="#">메뉴</li>
+	<ul>
+           </nav>
+
+           <div class="">(로그인 및 회원가입 관련 작성)
+                      <ul>
+                                 <li><a href="#">로그인</a><li>
+                                 <li><a href="#">회원가입</a><li>
+                                 <li><a href="#">검색 </a><li>
+                                 등=
+                    </ul>
+           </div>
+</header>
+-----------------------------------------
+<main id="main"> (header, footer를 제외한 모든 정보가 들어가는 공간)
+-- 아래와 같이 진행
+           <section>(div랑 다르게 큰 섹션을 잡아주는 코드)
+                      <figure>
+                                 <img src ="img/****>
+                      </figuer>
+                      <div>
+                                 <h2></h2>
+                                 <a href=""></>
+                      </div>
+           </section>
+--------------------------------------
+<footer>(이용약관 개인정보, 처리방침, 연락처, 
+           <div>(이용 약관, 개인정보 처리침)
+                      <ul>
+                                 <li><a href="#">이용방침</li>
+                      </ul>
+           </div>
+
+           <div>
+                      <ul>
+                                 <li>주소 :** **** *****</li>
+                                 <li>대표</li>
+                      </ul>
+                      <address> 연락처 기재 ----inline 태그와 p태그만 입력 가능
+                                 <p><a href="#">고객센터 :****-****</a></p>
+                      </address>
+           </div>
+          <p>© 2023.ruby.All Gights Reserved</p> - 저작권이 누구한테 잇는지 알려주는 법
+</footer>
+---------------------------------------------
+
+** 스타일은 외부로 작성
+<title></title> 밑에
+<link rel="stylesheet" href="css/****.css"/>
+
+* {margin / padding / box-sizing}
+li {list-style:none;}
+a { tex-decoration: none; / color: inherit;} 
+body { color: #333;} ----- 글자 색은 검정보다 회색으로
+
+
+margin-left를 사용하여 값을 배정하게 되면 -> 중간배열이 무너짐 -> 그래서 처음 코드를 잡아서 margin-left값을 0으로 잡아주기

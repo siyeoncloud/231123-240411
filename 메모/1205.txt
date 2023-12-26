@@ -1,0 +1,24 @@
+12/05 웹사이트제작 
+1920 * 컨테이너크기는 미정
+
+
+class 는 여러개 사용 가능
+id 단 한번만 사용가능 (큰 구역으로 나눌때)
+header = 작은 메뉴들로 구성 
+ <header class="header" id="header"> = 스크립트를 효과를 동적으로 이용하기위해서 
+클래스로도 지정 가능하지만 id가 더 간단하기도함 
+id는 크게 잡는영역 안에서 class 로 잡는 방식 
+
+상단 네비게이션 (글로벌 네비게이션) nav 태그
+▶<nav> <ul> <li><a href="#">메뉴1</a></li></u> </nav>
+
+main 태그안에는header footer를 제외한 정보가 들어가는 공간
+section = 큰 태그들을 나눠줄때 사용 
+address= 연락처 기재
+>> inline 태그 종류 와 block 태그는 p만 사용가능
+
+window + . = 이모지
+© copyright < 둘중하나만 사용
+
+
+ 

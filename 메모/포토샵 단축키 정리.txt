@@ -1,0 +1,23 @@
+포토샵 단축키
+
+ctrl + alt + c : 캔버스 크기 조절
+ctrl + g : 레이어 그룹 만들기
+ctrl + enter : 글자 마무리 할 때
+ctrl + alt + shift + s : 이미지로 저장
+ctrl + [] : 한칸씩 레이어이동 
+ctrl + shift + [] : 가장아래, 가장위로 이동
+ctrl + alt + g : 클리핑 마스트(한 레이어 안으로 사진 들어가게 하는 것)
+ctrl + 레이어 클릭 : 그 레이어 아이콘 영역 선택됨
+ctrl + d : 영역해제
+ctrl + r : 눈금 꺼내고 닫기
+alt : 화면 확대 및 축소
+ctrl + 1 : 화면 비율 100%로
+ctrl + 0 : 화면 비율 화면에 맞게
+ctrl + shift + n : 새 레이어 추가하기
+alt + delete : 배경화면 색 넣기
+ctrl + ; : 눈금선 한번에 안보이게 함
+ctrl + e : 레이어 합치기
+
+
+화면 질감 다르게 하는 법
+배경 클릭 -> filter -> filter gallery 클릭 ->

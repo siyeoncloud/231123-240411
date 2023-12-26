@@ -1,0 +1,61 @@
+
+034_트랜스폼크기
+transform: scale
+
+ 기본으로 1 정도에서 시작 
+이미지 확대는 1 기준으로 소수점 단위로도 확대 가능
+0.- 숫자로 들어가면 축소됨 ) 상하좌우 축소
+transform: scaleX 좌우 확대 및 축소 
+transform: scaleY 상하 확대 및 축소 
+
+= 가운데를 기준으로 확대 및 축소가 이루어짐 
+
+transform-origin: bottom; 
+= 기준 ( 방향 설정 ) 잡아주면 기준점으로  scaleY , X가 적용되어 확대 및 축소가 이루어짐
+/ 기본값  x축 center  기본값 y축 center 
+	x축 left center right
+	y축 top center bottom /
+ 
+035_트랜스폼기울기
+
+ transform: skewX(45deg); 
+= skew X 는 x축의 기울기 (45deg 각도)
+.box figure img 에  transition: all 0.5s; ( 호버시 효과 ) 설정해주고 이미지가 벗어나지 않게  .box figure img에 
+overflow: hidden; 설정해주기  
+
+ transform: skewY(180deg); 
+= = skewY 는 y축의 기울기 (180deg 각도) y축을 중심으로 180도 기울어짐
+
+
+transform: skew(10deg, 45deg);
+= x 10 y 45 로 각도가 기울어짐
+
+036_링크걸기
+
+<a href="https://www.naver.com/" = 도메인 주소 넣기
+ target="_blank" = 새 탭에서 링크여는 태그
+ title="네이버" = 링크태그에 마우스를 올렸울때 링크에 대한 설명이 들어가는 태그 
+ <a href="028_지도.html" = 파일 연결할때에는 파일명을 그대로 삽입하기
+
+<a href="img/배경/KakaoTalk_20231215_161010796.jpg" 이미지 링크태그에 걸고 
+download="(이름저장명)" 링크 태그안에 다운로드 태그를 걸면 링크를 눌렀을때 
+이미지가 다운받아짐.
+
+<a href="tel:010-1234-1232"> 모바일에서 연결 가능한 태그 (연락처)
+
+<a href="#">링크방지</a>
+= a href 의 # 은 위로 올라가는 속성값이 있음 * onclick="return false" 사용하면 
+링크 동작을 멈추는 태그 (기능을 실행하지않음) a href의 속성값이 있을때에는
+링크방지 용도가 아니면 사용하지 않아야함. 
+
+ <a href="#link0"> 으로 작성하고 연결하고 싶은 div class 타이틀 뒤에 id 명으로 link0 이라고 
+부텽주면 링크걸기이동을 눌렀을때 해당 id의 내부 페이지로 연결가능함
+
+
+.link01:active 마우스 호버시 컬러변경하는거지 '
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1-2 가상요소 before after
+
+body에 있는 타이틀 요소를 하나씩 잡아서 스타일 적용하기 힘들때
+h1 h2 h3 에 , 로 한 묶음으로 잡아서 스타일 적용이 가능함
+
+윈도우+. (이모지)
+
+ h1:before = h1 (제목) 앞에 content:' ';를 사용해 이모지를 붙여줌 
+= 🤦‍♀️ before << 이렇게보임 
+
+ h2:after = h2 (제목) 뒤에 content:' ';를 사용해 이모지를 붙여줌 
+= 폰트 사이즈 및 이모지 외에 텍스트도 적용 가능 
+   after 🎅
+
+ h3:before= content: ' ' ; / 가상요소를 사용하기 위해서는 content: ' ' ; 안에 공란으로 
+비워두더라도 사용해야함 
+
+{  content: '';                        
+   width: 100%;
+   height: 20px;
+   background-color: blueviolet;
+   display: block; 
+   position: absolute; 
+   left: 0;
+   bottom: 0; 
+   z-index: -1; }
+
+
+[ after / before ]는 인라인이라 백그라운드 컬러를 사용해도 보이지 않기에
+display:block를 사용해야보임
+
+display inline (텍스트의 길이의 영역) block (
+
+
+
+
