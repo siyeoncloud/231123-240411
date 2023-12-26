@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/01.css">
+
+</head>
+
+<body>
+    <!-- swiper demo -->
+    <section class="main_visual">
+        <!-- swiper 작성 -->
+        <!-- Swiper -->
+        <div class="swiper visual">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/동네배경01.jpg" alt="동네배경01">
+                    </figure>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/배경02.jpg" alt="동네배경01">
+                    </figure>
+                </div><!-- swiper-slide end -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .main_visual end -->
+
+    <section class="cont01">
+        <h3>두번째 슬라이드</h3>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/파란배경01.jpg" alt="">
+                    </figure>
+                </div><!-- swiper-slide end --> 
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/배경02.jpg" alt="">
+                    </figure>
+                </div><!-- swiper-slide end --> 
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/파란배경02.jpg" alt="">
+                    </figure>
+                </div><!-- swiper-slide end --> 
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .cont01 end -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".visual", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            //페이징 추가
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+        });
+
+        //cont01 슬라이드
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+    </script>
+</body>
+
+</html>

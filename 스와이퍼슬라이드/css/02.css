@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.perview {
+    width: 1280px;
+    margin: 100px auto;
+}
+ 
+.perview .swiper-slide figure {
+    height: 500px;
+}
+.perview .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perview02 {
+    width: 1280px;
+    margin: 100px auto;
+    position: relative;
+}
+.perview02 .swiper-slide {
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.perview02 .swiper-slide figure {
+    height: 100%;
+    
+}
+.perview02 .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+.perview02 .swiper-slide div {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    padding: 20px; 
+    /* transform: translateY(100%); */
+    backdrop-filter: blur(5px);
+    transition: 0.7s;
+    z-index: 99;
+}
+.perview02 .swiper-slide div h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.perview02 .swiper-slide:hover div{
+    /* transform: translateY(0%); */
+    bottom: 0;
+
+}
+.perview02 .swiper {
+    position: static;
+}
+.perview02 .swiper-pagination {
+    bottom: -20px;
+}

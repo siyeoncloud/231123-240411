@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_visual {
+    height: 100vh;
+}
+.main_visual .swiper {
+    height: 100%;
+}
+.main_visual .swiper-slide figure {
+    height: 100%;
+}
+.main_visual .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

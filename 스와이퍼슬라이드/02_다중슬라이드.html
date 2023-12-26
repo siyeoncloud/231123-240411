@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중 슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/02.css" />
+</head>
+
+<body>
+    <section class="perview">
+        <h3>슬라이드</h3>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/동네배경01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>크리스마스</h4>
+                        <p>12.25 월요일</p>
+                    </div>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>크리스마스</h4>
+                        <p>12.25 월요일</p>
+                    </div>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스02.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>크리스마스</h4>
+                        <p>12.25 월요일</p>
+                    </div>
+                </div><!-- swiper-slide end / 3 -->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/파란배경02.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>크리스마스</h4>
+                        <p>12.25 월요일</p>
+                    </div>
+                </div><!-- swiper-slide end / 4 -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .perview end -->
+
+    <section class="perview02">
+        <h3>슬라이드2</h3>
+        <!-- Swiper -->
+        <div class="swiper perviewSlide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>merry christmas</h4>
+                        <strong>20.000원</strong>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>merry christmas</h4>
+                        <strong>20.000원</strong>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>merry christmas</h4>
+                        <strong>20.000원</strong>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>merry christmas</h4>
+                        <strong>20.000원</strong>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/크리스마스01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>merry christmas</h4>
+                        <strong>20.000원</strong>
+                    </div>
+                </div> 
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section><!-- .perview02 end -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3.5, //슬라이드 갯수
+            spaceBetween: 24,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        var swiper = new Swiper(".perviewSlide", {
+            slidesPerView: 4, 
+            spaceBetween: 24,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

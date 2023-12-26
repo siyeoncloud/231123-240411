@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/01-1.css">
+
+</head>
+
+<body>
+    <section class="main_visual">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure><img src="img/크리스마스02.jpg"></figure>
+
+                </div><!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                    <figure><img src="img/크리스마스01.jpg"></figure>
+
+                </div><!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                    <figure><img src="img/크리스마스04.jpg"></figure>
+
+                </div><!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                    <a href="#">
+                    <figure><img src="img/크리스마스03.jpg"></figure></a>
+                </div><!-- .swiper-slide end -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
