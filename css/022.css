@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* 단축키없이 수작업으로작성하기.. */
+@font-face {
+    font-family: 'S-Core Dream 3';
+    src: url('font/에스코어드림/S-CoreDream-3Light.eot');
+    src: url('font/에스코어드림/S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-3Light.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 5';
+    src: url('font/에스코어드림/S-CoreDream-5Medium.eot');
+    src: url('font/에스코어드림/S-CoreDream-5Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-5Medium.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'S-Core Dream 4';
+    src: url('font/에스코어드림/S-CoreDream-4Regular.eot');
+    src: url('font/에스코어드림/S-CoreDream-4Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-4Regular.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 6';
+    src: url('font/에스코어드림/S-CoreDream-6Bold.eot');
+    src: url('font/에스코어드림/S-CoreDream-6Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-6Bold.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 7';
+    src: url('font/에스코어드림/S-CoreDream-7ExtraBold.eot');
+    src: url('font/에스코어드림/S-CoreDream-7ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-7ExtraBold.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 8';
+    src: url('font/에스코어드림/S-CoreDream-8Heavy.eot');
+    src: url('font/에스코어드림/S-CoreDream-8Heavy.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-8Heavy.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 9';
+    src: url('font/에스코어드림/S-CoreDream-9Black.eot');
+    src: url('font/에스코어드림/S-CoreDream-9Black.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-9Black.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-9Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 1';
+    src: url('font/에스코어드림/S-CoreDream-1Thin.eot');
+    src: url('font/에스코어드림/S-CoreDream-1Thin.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-1Thin.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-Core Dream 2';
+    src: url('font/에스코어드림/S-CoreDream-2ExtraLight.eot');
+    src: url('font/에스코어드림/S-CoreDream-2ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('font/에스코어드림/S-CoreDream-2ExtraLight.woff2') format('woff2'),
+        url('font/에스코어드림/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'S-Core Dream 1';
+    font-weight: 100;
+    font-size: 25px;
+}
+h2 {
+    font-family: 'S-Core Dream 2';
+    font-weight: 200;
+    font-size: 25px;
+}
+h3 {
+    font-family: 'S-Core Dream 3';
+    font-weight: 300;
+    font-size: 25px;
+}
+h4 {
+    font-family: 'S-Core Dream 4';
+    font-weight: 400;
+    font-size: 25px;
+}
+h5 {
+    font-family: 'S-Core Dream 5';
+    font-weight: 500;
+    font-size: 25px;
+}
+h6 {
+    font-family: 'S-Core Dream 6';
+    font-weight: 600;
+    font-size: 25px;
+}
+p {
+    font-family: 'S-Core Dream 7';
+    font-weight: bold;
+    font-size: 25px;
+}
+div {
+    font-family: 'S-Core Dream 8';
+    font-weight: 800;
+    font-size: 25px;
+}
+strong {
+    font-family: 'S-Core Dream 9';
+    font-weight: 900;
+    font-size: 25px;
+}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+    /* list-style에 기본값 상쇄 */
+}
+a {
+    text-decoration: none;
+    /* 텍스트 밑줄 없애기 */
+    color: inherit;
+    /* 부모의 상속값 받기 */
+}
+
+body {
+    color: black;
+    font-size: 13px;
+   /*  font-family: ;
+    font-weight: ; */
+
+}
+
+.header {
+    width: 1269px;
+    height: 75px;
+    background-color: #fff;
+    display: flex;
+    /* 가로정렬(좌우 공백없이 가로) */
+    justify-content: space-between;
+    /*  수평 + 중앙 정렬 display flex가 있을때 가능함*/
+    align-items: center;
+    /* 높이가운데정렬 */
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.header h1 figure img {
+    width: 120px;
+    height: 75px;
+    padding: 0 10px ;
+    
+}
+.header nav ul {
+    padding: 0 10px;
+}
+.header nav ul li {
+    display: inline-block;
+    /* 좌우여백이 생기면서 가로나열 */
+    /*  display: block; */
+    margin: 0 30px;
+}
+
+.header .util ul {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.header .util ul li {
+    margin-left: 30px;
+}
+.header .util ul li:first-child {
+    margin-left: 0;
+}
+
+.main {
+    width: 1280px;
+}
+
+
+
+
+
+

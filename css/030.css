@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: black;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+.title h2 {
+    font-size: 20px;
+    color: #86cab6;
+    font-weight: lighter;
+    /* 폰트두께 얇음 */
+}
+.title p {
+    font-size: 60px;
+    font-weight: bold;
+}
+.cont01 {
+    width: 1280px;
+    margin: 150px auto;
+}
+.cont01 .list {
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list figure {
+    width: 840px;
+    height: 100%;
+}
+.cont01 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px ;
+}
+.cont01 .list .text {
+    width: 430px;
+    background-color:#F6F8F8 ;
+    border-radius: 30px;
+    padding: 40px;
+}
+.text a { 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cont01 .list .text a span {
+    font-size: 50px;
+    font-weight: bold;
+    color: #005B45;
+}
+.cont01 .list .text a h3 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #005B45;
+    margin-bottom: 25px;
+}
+.cont02 {
+    background-color: #F6F8F8;
+    padding: 150px 0;
+}
+.cont02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list > div {
+    width: 410px;
+    height: 624px;
+    position: relative;
+}
+.cont02 .inner .list .item_wrap {
+    display: flex;
+   /*  flex-wrap: wrap;
+    align-content: space-between; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item_wrap .item {
+    height: 300px;
+    position: relative;
+}
+.cont02 .inner .list > div figure {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.cont02 .inner .list > div figure::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.04) 47%, rgba(0,0,0,0) 100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+.cont02 .inner .list > div figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .inner .list > div .text{
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    color: #fff;
+}

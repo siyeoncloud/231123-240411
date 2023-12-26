@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box p{
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    margin: 20px;
+}
+.box p:first-child:hover {
+    background-color: magenta;
+    /* 기존 p의 마우스를 호버했을때 변경하는 색상 */
+    transition: all 1s;
+    /* 마우스 호버시 시간 설정으로 커서를 올렸을때 부드럽게 설정해줌  */
+    width: 400px;
+}
+.box p:nth-child(2):hover {
+    width: 600px;
+    background-color: magenta;
+    transition: 3s;
+    
+}
+
+.box p:nth-child(3):hover{
+    height: 100px;
+    background-color: bisque;
+    transition: height 1s linear;
+    /* linear : 일정속도
+       ease-in : 점점 빨라짐
+       ease-in-out :시작과 끝이 느림
+       ease-out :점점 느려짐 */
+}
+.box p:nth-child(4):hover{
+    width: 400px;
+    background-color: coral;
+    transition: all 1s 2s;
+    /* 적용영역 / 실행시간 / 지연시간  */
+}
+.box p:nth-child(5):hover{
+    width: 1000px;
+    height: 250px;
+    background-color: deeppink;
+    transition: width 0.5s, background-color 1s 0.5s ;
+}
+.btn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+}
+.btn::before {
+    content: '';
+    width: 10%;
+    height: 100%;
+    background-color: brown;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    /* z-index: -1; */
+}
+.btn:hover::before {
+    width: 100%;
+}

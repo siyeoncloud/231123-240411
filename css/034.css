@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box figure { 
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 30px;
+}
+.box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box figure:nth-child(1) img {
+    transform: scale(0.5);
+    transform-origin:center bottom;
+}
+.box figure:nth-child(2):hover img {
+    transform: scaleX(0.3);
+}
+.box figure:nth-child(3):hover img {
+    transform: scaleY(0.7);
+    transform-origin: top;
+}

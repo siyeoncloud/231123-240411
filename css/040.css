@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+    line-height: 1;
+    position: relative;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #faebd77c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.header .inner nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+.header .inner .search input[type="text"] {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid #333;
+    padding: 0 10px;
+}
+.header .inner .search {
+    position: relative;
+}
+.header .inner .search input::placeholder {
+    font-size: 13px;
+    color: #333;
+    letter-spacing: -1px;
+}
+.header .inner .search img {
+    width: 30px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+*:focus {
+    outline: 3px solid red;
+    /* 전체 focus *탭으로 이동하는 영역의 설정값 
+     focus가 있어야지만 사용가능 아웃라인*/
+}
+
+.main_visual {
+    height: 100vh;
+
+}
+.main_visual figure {
+    height: 100%;
+}
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual div {
+    width: 1280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: beige;
+}
+.cont02 {
+    padding: 150px 0;
+}
+.cont02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
