@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로나열</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin: 0 auto;
+            width: 1600px;
+        }
+        ul {
+            width: 1600px;
+            margin: 0 auto;
+        }
+        ul li {
+            width: 360px;
+            background-color: rgb(247, 119, 76);
+            display: inline-block;
+            text-align: center;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        ul li:last-child{
+            margin-right: 0;
+        }
+        ul li:hover{
+            background-color: darksalmon;
+        }
+        .list {
+            width: 1600px;
+            margin: 0 auto;
+            background-color: brown;
+            display: flex;
+            /* justify-content: center; */
+        }
+        .list div {
+            width: 360px;
+            background-color: rgb(150, 179, 231);
+            margin-right: 20px;
+        }
+        .list div:last-child {
+            margin-right: 0;
+        }
+        .box {
+            width: 1600px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box div{
+            width: 386px;
+        }
+        .box div img{
+            width: 100%;
+            height: 386px;
+            object-fit: cover;
+            display: block;
+        }
+        .box div img:hover{
+            background-color: lightslategray;
+        }
+        .box div strong{
+            display: block;
+            padding: 10px 0px;
+            text-align: center;
+        }
+
+        .ruby {
+            width: 1600px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .ruby div{
+            width: 386px;
+        }
+        .ruby div img{
+            width: 100%;
+            height: 386px;
+            object-fit: cover;
+            display: block;
+        }
+        .ruby div strong{
+            display: block;
+            padding: 10px 0px;
+            text-align: center;
+        }
+        div img:hover{
+            background-color: rgb(126, 168, 156);
+        }
+    </style>
+</head>
+<body>
+    <h1>inline-block</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>서비스</li>
+        <li>홍보</li>
+        <li>투자정보</li>
+    </ul>
+    <h1>flex</h1>
+    <div class="list">
+        <div>아이템1</div>
+        <div>아이템2</div>
+        <div>아이템3</div>
+        <div>아이템4</div>
+    </div>
+
+    <div class="box">
+        <div>
+            <img src="IMG/1일차_크림라떼.jpg" alt="크림라떼"/>
+            <strong>크림라떼</strong>
+        </div>
+
+        <div>
+            <img src="IMG/캐모마일.jpg" alt="캐모마일"/>
+            <strong>캐모마일</strong>
+        </div>
+
+        <div>
+            <img src="IMG/1일차_토피넛.jpg" alt="토피넛"/>
+            <strong>토피넛 커피</strong>
+        </div>
+
+        <div>
+            <img src="IMG/1일차_말차라떼.jpg" alt="말차라떼"/>
+            <strong>말차라떼</strong>
+        </div>
+
+
+    </div><!-- .box end -->
+
+    <h2>루비카페</h2>
+
+    <ul class="bin">
+        <li>메뉴</li>
+        <li>커피</li>
+        <li>이달의 음료</li>
+        <li>문의사항</li>
+    </ul>
+
+    <div class="ruby">
+        <div>
+            <img src="IMG/Cotton Sky Yogurt Blended.jpg" alt="음료"/>
+            <strong>코튼 스타이 블랜디드</strong>
+        </div>
+
+        <div>
+            <img src="IMG/strawberryjpg.jpg" alt="딸기"/>
+            <strong>딸기 주스</strong>
+        </div>
+
+        <div>
+            <img src="IMG/1일차_토피넛.jpg" alt="토피넛 라때"/>
+            <strong>토피넛 라께</strong>
+        </div>
+
+        <div>
+            <img src="크림라떼" alt="크림라떼/">
+            <strong>크림라떼</strong>
+    </div>
+</body>
+</html>

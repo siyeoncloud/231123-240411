@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동영상 유튜브</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        figure {
+            height:100vh ;
+        }
+
+        figure video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 이미지와 영상도 같이 적용이되나 잘리는 현상이 보이기도함 */
+            display: block;
+            /* 세로 스크롤바와 아래쪽의 여백을 감춰주기위함 */
+        }
+
+        .youtube {
+            margin: 150px auto;
+            width: 1000px;
+            height: 500px;
+            /* 실제로는 적용이 안되는 높이 값. 유튜브의 div 있는 16:9 비율로 조정된것임. */
+            background-color: antiquewhite;
+        }
+
+        .youtube > div {
+            height: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 비율로 맞춰주는 값  */
+            position: relative;
+
+
+        }
+
+        .youtube > div iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <figure>
+        <video controls autoplay muted loop>
+            <source src="img/동영상.mp4" type="video/mp4">
+        </video>
+    </figure>
+
+    <div class="youtube">
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mi8S3LXnvgE?si=qd-btqRXVxb7liHR&autoplay=1&mute=1" 
+             title="YouTube video player"
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div><!-- .youtube end -->
+    
+</body>
+</html>

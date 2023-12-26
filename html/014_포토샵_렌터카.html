@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제시카 렌터카</title>
+    <style>
+        @font-face {
+            font-family: 'HakgyoansimGaeulsopungB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGaeulsopungB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .car{
+            width: 860px;
+            margin: 50px auto;
+            background-color: #3366ff;
+            padding: 70px;
+            box-sizing: border-box;
+            /* width에서 padding값을 포함한 박스 사이즈 */
+            text-align: center;
+        }
+        .car .title{
+            margin-bottom: 100px;
+            font-family: 'GmarketSansMedium';
+        }
+        .car .title p{
+            font-family: 'HakgyoansimGaeulsopungB';
+            color: white;
+            font-size: 30px;
+            margin-bottom: 24px;
+        }
+        .car .title h1{
+            font-family: 'GmarketSansMedium';
+            color: white;
+            font-size: 180px;
+            line-height: 180px;
+            margin-bottom: 50px;
+        }
+        .car .title span{
+            color:yellow;
+        }
+        .car .title strong{
+            width: 550px;
+            height: 60px;
+            color: #ffeb00;
+            background-color: #142a66;
+            display: block;
+            line-height: 60px;
+            /* height 값이랑 동일하게 잡아주면 안에 글이 중간으로 잡힘 */
+            font-size: 25px;
+            font-weight: normal;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+
+        .car .figure img {
+            width: 100%
+        }
+        .car .info div:nth-child(1){
+            box-shadow: 10px 10px 20px #555555ab;
+        }
+        .car .info div:nth-child(2){
+            box-shadow: 10px 10px 20px #555555ab;
+        }
+        .car .info div:nth-child(3){
+            box-shadow: 10px 10px 20px #555555ab;
+        }
+        .car .info div:hover{
+            background-color: #acacac;
+        }
+        .car .info div{
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding: 40px 0 50px;
+            margin-bottom: 30px;
+            position: relative;
+            margin-top: -5px;
+        }
+        .car .info div strong{
+            width: 170px;
+            height: 40px;
+            background-color: #3366ff;
+            color: white;
+            display: block;
+            border-radius: 20px;
+            margin: 0 auto;
+            line-height: 40px;
+        }
+        .car .info div h2{
+            font-size: 32px;
+            line-height: 42px;
+            letter-spacing: -4px;
+            margin: 22px 0 29px;
+        }
+        .car .info div p{
+            font-size: 20px;
+            color: #555;
+            line-height: 25px;
+            letter-spacing: -1px;
+        }
+        .car .btn{
+            margin-top: 70px;
+        }
+        .car .btn a{
+            width: 278px;
+            height: 77px;
+            background-color: #ffeb00;
+            border: 2px solid black;
+            border-radius: 40px;
+            line-height: 77px;
+            display: block;
+            margin: 0 auto;
+            font-size: 18px;
+            
+        }
+        .car .btn p{
+            font-size: 17px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <div class="title">
+            <p>렌터카 관광 편의 제공</p>
+            <h1>
+                렌터카<br />
+                <span>제시카</span>
+            </h1>
+            <strong>제주시 렌터카 인수 반납 대행 서비스</strong>
+        </div><!-- .title end   -->
+
+        <figure>
+            <img src="IMG/차.png"/>
+        </figure>
+
+        <div class="info">
+            <div>
+                <strong>인수대행</strong>
+                <h2>대여한 렌터카를 대신 인수하여<br />
+                    공항으로 마중!</h2>
+                <p>기사님이 렌터카를 대신 인수하여 공항으로 마중 후 공항근처<br />
+                     제시카존에서 최종 인계해드립니다.</p>
+            </div>
+
+            <div>
+                <strong>반납대행</strong>
+                <h2>공항까지 배웅하고<br />
+                    렌터카 반납도 대신!</h2>
+                <p>제시카조느올 오시면 대기중인 기사님이 공항까지 배웅 후<br />
+                    렌터카차량을 대신 반납해드립니다.
+                </p>
+            </div>
+
+            <div>
+                <strong>주차 안심번호</strong>
+                <h2>내 휴대폰 번호 노출될 걱정은<br />
+                    이제 그만!</h2>
+                <p>고객님의 휴대폰번호와 주차안심번호가 자동으로연결되어<br / >
+                    소중한 개인정보를 지켜 드립니다.
+                </p>
+            </div>
+        </div><!-- .info end  -->
+
+        <div class="btn">
+            <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk">제시카 카카오 상담톡</a>
+            <p>카카오톡 상담을 통해 제시카 서비스 관련 문의를 주시면<br />
+                쉽고 빠르게 해결을 도와드리겠습니다.</p>
+        </div>
+    </div><!-- .car end   -->
+</body>
+</html>

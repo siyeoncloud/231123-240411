@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림자태그</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .shadow h1{
+            font-size: 40px;
+        }
+        .shadow div{
+            width:200px;
+            height: 200px;
+            background-color: rgb(204, 147, 147);
+            font-size: 25px;
+            text-align: center;
+            line-height: 200px;
+            /* height와 같은 높이 설정 하면 세로 중간 배열 가능 */
+            display: inline-block;
+            /* inline 블럭이 옆으로 배열
+            - 간격을 두고 배열 */
+            margin: 30px;
+            /* 박스 내부 값 */
+        }
+        /*
+        다른태그가 함께 있을 때 선택한 태그만 적용
+        nth-of-type()
+        firt-of-type
+        last-of-type */
+        .shadow div:nth-of-type(1){
+            background-color: blueviolet;
+            box-shadow: 10px 30px 20px rgba(128, 128, 128, 0.712);
+        }
+        .shadow div:nth-of-type(2){
+            box-shadow: -10px -30px 20px rgba(128, 128, 128, 0.712);
+        }
+        .shadow div:nth-of-type(3){
+            box-shadow: 10px 20px 5px rgba(128, 128, 128, 0.712), 
+            -10px -20px 5px rgba(0, 0, 0, 0.521), 10px 20px 5px rgba(255, 0, 0, 0.356);
+        }
+        .shadow div:last-of-type{
+            box-shadow: inset 20px 30px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow">
+        <h1>박스 그림자</h1>
+        <div>그림자1</div>
+        <div>그림자2</div>
+        <div>그림자3</div>
+        <div>그림자4</div>
+    </div>
+</body>
+</html>

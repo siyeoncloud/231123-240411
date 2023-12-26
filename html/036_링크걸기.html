@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크걸기</title>
+    <style>
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            /* 부모가 가지고 있는 상속값을 가져옴 */
+        }
+
+        .link05 {
+            margin-top: 1500px;
+        }
+
+        .link01 {
+            width: 120px;
+            height: 40px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .link01:hover {
+            background-color: #000;
+            color: rgb(230, 6, 6);
+            text-decoration: underline;
+        }
+
+        .link01:active {
+            color: aqua;
+        }
+       .link01 a {
+            display: block;
+        }
+
+        .link02 {
+            border: 1px solid #000;
+            display: inline-block;
+            padding: 10px 25px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="link01" id="link0">
+        <a href="https://www.naver.com/" target="_blank" title="네이버">링크걸기</a>
+    </div><!-- .link01 -->
+    <div class="link02">
+        <a href="028_지도.html" target="_blank" title="지도파일">지도파일연결</a>
+    </div><!-- .link02 end  -->
+    <div class="link03">
+        <a href="img/배경/KakaoTalk_20231215_161010796.jpg" download="">이미지다운로드</a>
+
+    </div><!-- .link03 end -->
+    <div class="link04">
+        <a href="tel:010-1234-1232">전화연결</a>
+    </div><!-- .link04 end -->
+
+    <div class="link05">
+        <a href="#" onclick="return false">눌러도 아무변화없어요</a>
+    </div><!-- .link05 end -->
+
+    <div class="link06">
+        <a href="#link0">링크걸기로 이동</a>
+    </div><!-- .link06 end -->
+    
+</body>
+</html>

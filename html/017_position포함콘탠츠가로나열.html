@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position포함컨텐츠가로나열</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color:inherit
+        }
+        .last{
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .last .item{
+            width: 630px;
+            background-color: antiquewhite;
+        }
+        /* 이미지 원본크기를 .item크기에 맞게 설정 */
+        .last .item figure{
+            width: 100%;
+            height: 630px;
+        }
+        /* 이미지 크기를 .item figuer크기에 맞게 설정 하는 법 */
+        .last .item figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item{
+            position: relative;
+        }
+        .item div:nth-child(2){
+            position:absolute;
+            top:0;
+            left:0;
+            color: aliceblue;
+        }
+        .item div:nth-child(3){
+            position:absolute;
+            bottom:0;
+            right:0;
+            background-color: aliceblue;
+            color: rgb(0, 0, 0);
+        }
+        .item div:nth-of-type(2) a{
+            display: FLEX;
+            align-items: center;
+        }
+        .item div:nth-of-type(2) a img{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="last">
+        <div class="item">
+            <figure>
+                <img src="img/뫀코ㅗ.jpg" alt="모코코"/>
+            </figure>
+            
+            <div>
+                <span>카테고리</span>
+                <h1>콘텐츠 제목을 작성1</h1>
+            </div>
+
+            <div>
+                <a href="https://lostark.game.onstove.com/Main">자세히보기
+                    <img src="img/icons8-오른쪽-화살표-50.png"alt="오른쪽화살표"/>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="img/리그오브레전드.jpg" alt="리그오브레전드"/>
+            </figure>
+            <div>
+                <span>카테고리</span>
+                <h1>콘텐츠 제목을 작성1</h1>
+            </div>
+            <div>
+                <a href="https://www.leagueoflegends.com/ko-kr/">자세히보기
+                    <img src="img/icons8-오른쪽-화살표-50.png"alt="오른쪽화살표"/>
+                </a>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

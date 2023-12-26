@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산관광명소(수업)</title>
+    <style>
+      @font-face {
+     font-family: 'TheJamsil5Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+     font-weight: 700;
+     font-style: normal;
+     }
+        * {
+            margin: 0;
+            padding: 0;
+            /* 전체설정초기화 */
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            /* 텍스트 밑줄 없애기 */
+            color: inherit;
+            /* 부모가 가진 상속값적용 */
+        }
+        .wrap {
+            width: 860px;
+            /* 전체 화면값*/
+            margin: 0 auto;
+            /* 중앙으로 옮기기 */
+            background-color:beige;
+            /* 나중에 삭제 (주석처리) */
+        }
+        .title {
+            position: relative;
+
+        }
+        .title .bg {
+            height: 935px;
+        }
+        .title .bg img {
+            width: 100%;
+            /* 부모가 가지고 있는 영역만 잡을때
+            그 이외에 넓이값은 생략가능 */
+            height: 100%;
+            /* 비율에 맞춰서 전체설정값 % */
+            object-fit: cover;  
+        }
+        .title div {
+            width: 100%;
+            position: absolute;
+            /* 이태그를 사용할때 배치 방향설정해주기 */
+            top: 115px;
+            left: 0;
+/*             background-color: rgb(129, 238, 238); */
+            text-align: center;
+        }
+        .title div span {
+            width: 250px;
+            /* 가로값 */
+            height: 50px;
+            /* 세로값 = 높이값 */
+            background-color:#d86262;
+            display: block;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+        .title div h1 {
+            font-family: 'TheJamsil5Bold';
+            font-size: 100px;
+            color: #fff;
+            margin:20px 0 50px;
+        }
+        .title div p {
+            font-size: 20px;
+            color: #fff;
+            line-height: 28px;
+        }
+        .title div figure {
+            /* 간격을 잡아줄때는 이미지를 감싸고있는 figuer태그(부모)에 잡아주는게 좋음 */
+            margin-top: 150px;
+            /* 텍스트와 이미지 사이의간격  */
+            margin-left: 50px;
+            text-align: left;
+            /* 글자뿐만이 아니라 img태그에도 적용가능 
+            display:block으로 적용되는 순간 text-align: center;가 적용이안됨*/
+        }
+        .cont_wrap .cont01 {
+            background: url('img/타이틀배경2.jpg') left bottom / cover;
+            padding: 100px 50px;
+            text-align: center;
+        }
+        .cont_wrap .cont01 h2 {
+            font-family: 'TheJamsil5Bold';
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .cont_wrap .cont01 .list {
+            display: flex;
+            /* 가로나열 */
+           /*  background-color: aquamarine; */
+            justify-content: space-between;
+            
+        }
+        .cont_wrap .cont01 .list .item {
+            width: 370px;
+            background-color: #fff;
+            padding: 13px;
+            /* 내부여백 */
+            border: 2px solid #000;
+            /* 테두리 두께 종류 색상 */
+            border-radius: 10px;
+            /* 모서리곡선 */
+            position: relative;
+        }
+        .cont_wrap .cont01 .list .item figure {
+            /* 바디의 순서로 태그 작성하기 */
+            width: 340px;
+            height: 250px;
+            /* 디바이스 운영체제에 따라서 설정하기때문에 
+            px (고정값)으로 설정하면 영역에 벗어나기도함
+            % (사이즈변경)이 가능하기에 조정가능  */
+        }
+        .cont_wrap .cont01 .list .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont_wrap .cont01 .list .item div span {
+            width: 70px;
+            height: 25px;
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            background-color: rgb(252, 128, 40);
+            color: #fff;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        .cont_wrap .cont01 .list .item div h3 {
+            border-bottom: 2px solid #000;
+            /* 두께 스타일 색상 */
+            padding: 20px 0 ;
+        }
+        .cont_wrap .cont01 .list .item div p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        .cont_wrap .cont01 .btn {
+            width: 250px;
+            /* 가로값 */
+            height: 60px;
+            /* 세로값 */
+            font-size: 20px;
+            /* 폰트사이즈 */
+            color: #fff;
+            /* 텍스트컬러 */
+            border: 2px solid #000;
+            /* 테두리 두께 스타일 컬러 */
+            border-radius: 30px;
+            /* 모서리 곡선 */
+            margin: 50px auto;
+            /* 외부여백 자동설정 */
+            line-height: 60px;
+            /* 높이가운데정렬 height랑 동일한 px 설정*/
+            background-color: palevioletred;
+            /* 배경컬러 */
+        }
+        .cont_wrap .cont01 .btn a {
+            display: block;
+           /* 텍스트가 가지고 있는 영역 외부에 감싸고 있는 영역까지 선택가능하게 만들어줌 */
+        }
+
+        .cont_wrap .cont02 {
+            background: rgb(79,37,128);
+            background: linear-gradient(188deg, rgba(79,37,128,1) 0%, rgba(125,97,112,1) 48%, rgba(255,150,0,1) 100%);
+            /* 그라디언트io를 사용 */
+            padding: 100px 50px;
+            position: relative;           
+        }
+        .cont_wrap .cont02 h2 {
+            font-family: 'Cafe24Supermagic-Bold-v1.0';
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .cont_wrap .cont02 .list .item {
+            background-color: #fff;
+            border: 2px solid #000;
+            padding: 13px;
+            /* 내부여백 */
+            border-radius: 10px;
+            /* 모서리 곡선 */
+            display: flex;
+            /* 가로나열 */
+            justify-content: space-between;
+           /*  아래에 해당하는 태그가 있어야지 사용가능한 속성태그 */
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .cont_wrap .cont02 .list .item figure {
+            width: 355px;
+            height: 270px;
+        }
+        .cont_wrap .cont02 .list .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .cont_wrap .cont02 .list .item div {
+            width: 355px;    
+        }
+        .cont_wrap .cont02 .list .item div h3 {
+            font-size: 30px;
+        }
+        .cont_wrap .cont02 .list .item div p {
+            font-size: 18px;
+            margin: 15px 0 30px;
+        }
+        .cont_wrap .cont02 .list .item div strong {
+            font-size: 30px;
+            color: red;
+        }
+        .cont_wrap .cont02 .btn {
+            width: 250px;
+            /* 가로값 */
+            height: 60px;
+            /* 세로값 */
+            line-height: 60px;
+            /* 높이가운데정렬 height랑 동일한 px 설정*/
+            font-size: 20px;
+            /* 폰트사이즈 */
+            background-color: #063881;
+            /* 배경컬러 */
+            color: #fff;
+            /* 텍스트컬러 */
+            border: 2px solid #000;
+            /* 테두리 두께 스타일 컬러 */
+            border-radius: 30px;
+            /* 모서리 곡선 */
+            text-align: center;
+            /* 텍스트정렬 */
+            margin: 50px auto;
+            /* 좌우여백 자동 */
+        }
+        .cont_wrap .cont02 .btn a {
+            display: block;
+        }
+        /* 자식선택자 
+        .cont02를 기준으로 item figure는 자손
+        cont02의 자식은 h2 list btn figure 
+        > 표시는 자식을 표시*/
+        .cont_wrap .cont02 > figure {
+            position: absolute;
+            right: 50px;
+            bottom: 20px;
+            /* 이미지가 너무 붙어있는거같으면 px로 설정 */
+        }
+        .call {
+         height: 100px;
+         line-height: 100px;
+         font-size: 20px;
+         color: #fff;
+         background-color: #333;
+         text-align: center;
+
+        }
+
+        
+
+
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <div class="title">
+            <figure class="bg">
+                <img src="img/타이틀배경.jpg" alt="타이틀배경">
+            </figure>
+            <div>
+                <span>취향저격 국내여행</span>
+                <h1>부산시티투어</h1>
+                <p>한국의 항구도시이자 육, 해, 공을 아우르는 중요한 교통 중심지.<br/>
+                    눈부신 조명과 바다에 비친 도시의 모습이 어우러진<br/>
+                    부산의 야경은 더없이 낭만적입니다. </p>
+                <figure >
+                    <img src="img/타이틀배경캐릭터1.png" alt="타이틀배경 캐릭터1">
+                </figure>        
+            </div>
+        </div><!-- .title end -->
+
+        <div class="cont_wrap">
+            <div class="cont01">
+                <h2>부산의 관광명소</h2>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/해운대블루라인파크.jpg" alt="해운대 블루라인파크">
+                        </figure>
+                        <div>
+                            <span>BEST</span>
+                            <h3>해운대 블루라인파크</h3>
+                            <p>수려한 해안 절경을 따라 해운대 해변열차와 <br/>
+                                해운대 스카이캡슐을 운행하는<br/>
+                                국제 관광도시 부산,<br/>
+                                해운대 관광특구의 핵심 관광 시설</p>
+                        </div>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/해동용궁사.jpg" alt="해동 용궁사">
+                        </figure>
+                        <div>
+                            <span>BEST</span>
+                            <h3>해동용궁사</h3>
+                            <p>부산시 기장군 동쪽에 자리잡은 해동 용궁사<br/>
+                                바다와 가장 가까운 사찰로 알려져 있고, <br />
+                               대한민국의 관음성지의 하나</p>
+                        </div>
+                    </div><!-- .item end -->
+
+                </div><!-- .list end -->
+
+                <div class="btn">
+                    <a href="#">더 알아보기</a>
+                </div><!-- .btn end -->
+            </div><!-- .cont01 end -->
+
+            <div class="cont02">
+                <h2>부산시티투어</h2>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/해운대출발코스.jpg" alt="해운대출발코스">
+                        </figure>
+                        <div>
+                            <h3>해운대출발코스</h3>
+                            <p>UN기념공원 - 산만디투어 - 망향로 전시관,<br/>
+                                이바구공작소, 168계단 - 태종대 - <br/>
+                                영도 흰여울문화마을 - 송도해수욕장 - 스카이워크<br/>
+                                - 자갈치시장,남포동 BIFF광장,광복동</p>
+                            <strong>32,000원</strong>
+                        </div>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/부산역출발코스.jpg" alt="부산역출발코스">
+                        </figure>
+                        <div>
+                            <h3>부산역출발코스</h3>
+                            <p>기장 해동용궁사 - 기장 아난티코브 -<br/>
+                                해운대 블루라인파크 해변열차 - 미포에서 해운대<br/>
+                                - 자갈치 시장, 남포동 BIFF광장, 광복동</p>
+                            <strong>36,000원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                 </div><!-- .list end -->
+
+                 <div class="btn">
+                    <a href="#">예약바로가기</a>
+                 </div><!-- .btn end -->
+
+                <figure>
+                    <img src="img/타이틀배경캐릭터2.png" alt="캐릭터2">
+                </figure>
+
+            </div><!-- .cont02 end -->
+        </div><!-- .cont_wrap end -->
+
+             <div class="call">
+            <a href="tel.1833-5880">문의전화 : 1833-5880 </a>
+            </div><!-- .call end -->
+
+    </div><!-- .wrap end -->
+</body>
+</html>

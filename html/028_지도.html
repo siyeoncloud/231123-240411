@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지도</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .google_map iframe {
+            width: 100%;
+            /* 넓이값영역 %  */
+        }
+        .kakao_map .root_daum_roughmap {
+            width: 100% !important;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="google_map">
+        <h3>구글지도</h3>
+        <!-- 구글지도연결-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.5243898985152!2d129.05829077588265!3d35.154187590403794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb70f147a9c9%3A0x5f8432a247bb69fa!2z6re466aw7Lu07ZOo7YSw7JWE7Lm0642w66-4IOu2gOyCsOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1702512582762!5m2!1sko!2skr" width="1280" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section><!-- .google_map end-->
+
+    <section class="kakao_map">
+        <h3>카카오맵지도</h3>
+        <!-- 카카오맵지도 연결 -->
+        <!-- * 카카오맵 - 지도퍼가기 -->
+        <!-- 1. 지도 노드 -->
+
+        <div id="daumRoughmapContainer1702513370191" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+        <!--
+            2. 설치 스크립트
+            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+        -->
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+        <!-- 3. 실행 스크립트 -->
+        <script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp" : "1702513370191",
+                "key" : "2h7yw",
+                "mapWidth" : "1280",
+                "mapHeight" : "360"
+            }).render();
+        </script>
+
+    </section><!-- .kakao_map end -->
+    
+</body>
+</html>

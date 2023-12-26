@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position포함컨텐츠가로나열</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color:inherit
+        }
+        .last{
+            width: 1280px;
+            margin: 0 auto;
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: space-between;
+        }
+        .last .item{
+            width: 630px;
+            background-color: antiquewhite;
+        }
+        .last .item figure{
+            width: 100%;
+            height: 630px;
+        }
+        .last .item figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="last">
+        <div class="item">
+            <figure>
+                <img src="img/뫀코ㅗ.jpg" alt="모코코"/>
+            </figure>
+            <div>
+                <span>카테고리</span>
+                <h1>콘텐츠 제목을 작성1</h1>
+            </div>
+            <div>
+                <a href="https://lostark.game.onstove.com/Main">자세히보기
+                    <img src="img/icons8-오른쪽-화살표-50.png"alt="오른쪽화살표"/>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="img/리그오브레전드.jpg" alt="리그오브레전드"/>
+            </figure>
+            <div>
+                <span>카테고리</span>
+                <h1>콘텐츠 제목을 작성1</h1>
+            </div>
+            <div>
+                <a href="https://www.leagueoflegends.com/ko-kr/">자세히보기
+                    <img src="img/icons8-오른쪽-화살표-50.png"alt="오른쪽화살표"/>
+                </a>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

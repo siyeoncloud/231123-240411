@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 스크롤</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #0000001b;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(5px);
+        }
+        .main_visual {
+            height: 100vh;
+        }
+        .main_visual figure {
+            height:100%;
+        }
+        .main_visual figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 {
+            margin: 200px 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .cont01 div {
+            width: 400px;
+            margin: 0 20px;
+        }
+        .cont01 div figure {
+            height: 400px;
+        }
+        .cont01 div figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>헤더</header>
+        <main>
+            <section class="main_visual">
+                <figure><img src="img/크리스마스1.jpg" alt="헤더">
+                </figure>
+            </section><!-- .main_visual -->
+
+            <section class="cont01">
+                <div data-aos="zoom-in">
+                    <figure><img src="img/홈페이지제작/겨울01.jpg" alt="배경">
+                    </figure>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint! Vitae explicabo laudantium ipsum culpa ipsa.
+                         Maxime aliquam assumenda, repellat ea modi laborum neque consequuntur architecto at saepe optio dolores!</p>
+                </div>
+
+                <div data-aos="zoom-in-up">
+                    <figure><img src="img/홈페이지제작/KakaoTalk_20231211_115030904.jpg" alt="배경">
+                    </figure>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint! Vitae explicabo laudantium ipsum culpa ipsa.
+                         Maxime aliquam assumenda, repellat ea modi laborum neque consequuntur architecto at saepe optio dolores!</p>                         
+                </div>
+
+                <div data-aos="zoom-in-down">
+                    <figure><img src="img/홈페이지제작/KakaoTalk_20231211_115031349.jpg" alt="배경">
+                    </figure>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint! Vitae explicabo laudantium ipsum culpa ipsa.
+                         Maxime aliquam assumenda, repellat ea modi laborum neque consequuntur architecto at saepe optio dolores!</p>
+                </div>
+
+            </section><!-- .cont01 end -->
+        </main>
+    </div><!-- #wrap end -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 2000px;
+        }
+        .box {
+            width: 800px;
+            height: 800px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            padding: 100px;
+            box-sizing: border-box;
+
+            position: relative;
+        }
+        .box div {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: azure;
+            top: -300px;
+            left: 300px;
+            /* relative가 가지는 현재위치에서 이동이 이루어짐 */
+
+            z-index: -1;
+            /* 앞뒤 위치 변경
+            position이 있어야지만 사용가능 */
+        }
+        .box div p {
+            width: 100px;
+            height: 100px;
+            position: absolute;            
+        }
+        .box div p:first-child {
+            background-color: burlywood;
+            right: 0px;
+            top: 0px;
+        }
+        .box div p:nth-child(2) {
+            background-color: crimson;
+            right: 0px;
+            bottom: 0px;
+        }
+        .box div p:nth-child(3) {
+            background-color: blue;
+            left: 0px;
+            bottom: 0px;
+        }
+        .box div p:nth-child(4) {
+            background-color: darksalmon;
+            left: 0px;
+            top: 0px;
+        }
+        .box div p:nth-child(5) {
+            background-color: hotpink;
+            position: fixed;
+            /* 위치고정 */
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>position</h1>
+        <div>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+
+        </div>
+    </div><!-- .box end -->
+
+</body>
+</html>

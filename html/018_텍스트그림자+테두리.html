@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트그림자 + 테두리</title>
+    <style>
+        @font-face {
+            font-family: 'TTWanjudaedunsancheB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .text{
+            font-family: 'TTWanjudaedunsancheB';
+            font-size: 50px;
+            margin: 50px;
+        }
+        /* 내부로 두꺼워 지는 텍스트 테두리 */
+        .text1{
+            -webkit-text-stroke: 3px rgb(221, 108, 108);
+        }
+        /* 텍스트 그림자 설정 */
+        .text2{
+            text-shadow: 5px 10px 5px red;
+        }
+        /* 텍스트 테두리를 그림자로 설정 */
+        p.text3{
+            text-shadow: -2px 0 indianred, 0 2px indianred, 2px 0 indianre, -2px 0 indianred;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="text text1">텍스트 테두리 그림자1</p>
+        <p class="text text2">텍스트 테두리 그림자2</p>
+        <p class="text text3">텍스트 테두리</p>
+    </div>
+</body>
+</html>

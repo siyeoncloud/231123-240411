@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지위텍스트배치</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            background-color:blanchedalmond;
+            position:relative
+        }
+        .box figure{
+            width:100%;
+            height: 500px;
+        }
+        .box figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box span{
+            width: 20px;
+            height: 70px;
+            /* span은 인라인태그이지만 absolute를 적용할 경우 가로값, 세로값 적용가능 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 30px;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+        }
+        .box p{
+            width: 300px;
+            background-color: aquamarine;
+            position:absolute;
+            top:10%;
+            left:50%;
+            transform:translate(-50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <figure>
+            <img src="img/갱얼쥐.png" alt="아로"/>
+            <span>1</span>
+            <p>
+            </p>
+        </figure>
+    </div>
+</body>
+</html>

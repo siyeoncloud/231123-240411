@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산관광명소</title>
+    <style>
+        @font-face {
+            font-family: 'JalnanGothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'JalnanGothic';
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .wrap {
+            width: 860px;
+            margin: 0 auto;
+            background-color: #d0ffff;
+        }
+        .title {
+            position: relative;
+
+        }
+        .title .bg {
+            width: 100%;
+            height: 935px;
+        }
+        .title .bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .title div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .title div span {
+            width: 250px;
+            height: 50px;
+            background-color: #d86262;
+            display: block;
+            line-height: 50px;
+            font-size: 20px;
+            color: white;
+            border-radius: 25px;
+            margin: 0 auto;
+        }
+        .title div h1 {
+            font-size: 100px;
+            color: #fff;
+            margin: 20px 0 50px;
+        }
+        .title div p {
+            font-size: 20px;
+            color: #fff;
+            line-height: 28px;
+        }
+        .title div figure {
+            margin-top: 150px ;
+            margin-left: 50px;
+            text-align: left;
+            position: absolute;
+            left: 10px;
+            bottom: 100px;
+        }
+        .cont_wrap .cont01 {
+            background: url(img/부산광관명소2.jpg) left bottom / cover;
+            padding: 100px 50px;
+            text-align: center;
+        }
+        .cont_wrap .cont01 h2 {
+            font-size: 60px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        .cont_wrap .cont01 .list { 
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont_wrap .cont01 .item {
+            width: 370px;
+            background-color: #fff;
+            padding: 13px;
+            border: 2px solid black;
+            border-radius: 10px;
+            position: relative;
+        }
+        .cont_wrap .cont01 .list .item figure {
+            height: 250px;
+        }
+        .cont_wrap .cont01 .list .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont_wrap .cont01 .list .item div span {
+            width: 70px;
+            height: 25px;
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            background-color: #f99158;
+            font-size: 14px;
+            color: #fff;
+            line-height: 25px;
+        }
+        .cont_wrap .cont01 .list .item div h3 { 
+            font-size: 20px;
+            border-bottom: 1px solid black;
+            padding: 20px 0;
+        }
+        .cont_wrap .cont01 .list .item p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .cont_wrap .cont01 .btn {
+            width: 250px;
+            height: 60px;
+            font-size: 20px;
+            border:  2px solid black;
+            background-color: #fe8a8d;
+            color: #fff;
+            line-height: 60px;
+            display: block;
+            border-radius: 30px;
+            margin: 30px auto 0;
+        }
+        .cont_wrap .cont01 .btn a {
+            display: block;
+        }
+        .cont_wrap .cont02 {
+            background: rgb(254,138,139);
+            background: linear-gradient(360deg, rgba(254,138,139,1) 0%, rgba(251,133,112,1) 53%, rgba(250,149,93,1) 100%);
+            padding: 100px 50px;
+            position: relative;
+        }
+        .cont_wrap .cont02 h2 {
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+        }
+        .cont_wrap .cont02 .list .item {
+            background-color: #fff;
+            border: 2px solid black;
+            padding: 13px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .cont_wrap .cont02 .list .item figure {
+            width: 300px;
+            height: 270px;
+        }
+        .cont_wrap .cont02 .item img {
+            width: 355px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .cont_wrap .cont02 .list .item div {
+            width: 355px;
+        }
+        .cont_wrap .cont02 .list .item div h3 {
+            font-size: 30px;
+        }
+        .cont_wrap .cont02 .list .item div p {
+            font-size: 18px;
+            margin: 15px 0 30px;
+        }
+        .cont_wrap .cont02 .list .item div strong {
+            font-size: 30px;
+            color: #dc0404;
+        }
+        .cont_wrap .cont02 .btn{
+            width: 250px;
+            height: 60px;
+            border: 2px solid black;
+            background-color: #063881;
+            color: #fff;
+            line-height: 60px;
+            border-radius: 20px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .cont_wrap .cont02 .btn a {
+            display: block;
+        }
+        /* > = 자식 선택자 .cont02를 기준으로 item figure는 자손 */
+        .cont_wrap .cont02 > figure {
+            position: absolute;
+            bottom: 0;
+            right: 50px;
+        }
+        .call{
+            background-color: #333333;
+            height: 100px;
+            color: #fff;
+            font-size: 20px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .call a {
+            display: block;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <figure class="bg">
+                <img src="img/그라데이션.jpg" alt="부산시티투어 타이틀 배경"/>
+            </figure><!--.bg end-->
+            <div>
+                <span>취향저격 국내여행</span>
+                <h1>부산시티투어</h1>
+                <p>한국의 항구도시이자 육, 해, 공을 아우르는 중요한 교통 중심지.<br />
+                    눈부신 조명과 바다에 비친 도시의 모습이 어우러진<br />
+                    부산의 야경은 더없이 낭만적입니다.
+                </p>
+
+                <figure>
+                    <img src="img/Untitled-1.png" alt="부산시티투어-사람-캐릭터"/>
+                </figure>
+            </div>
+        </div><!--.title end-->
+
+        <div class="cont_wrap">
+            <div class="cont01">
+                <h2>부산의 관광명소</h2>
+                
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/해운대 블루라인파크.jpg" alt="해운대블루라인파크"/>
+                        </figure>
+                        
+                        <div>
+                            <span>best</span>
+                            <h3>해운대 블루라인파크</h3>
+                            <p>수려한 해안 절경을 따라 해운대 해변열차와<br />
+                                해운대 스카이캡슐을 운행하는<br />
+                                국제 관광도시 부산,<br />
+                                해운대 관광특구의 핵심 관광 시설
+                            </p>
+                        </div>
+                    </div><!--.item end-->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/해동 용궁사.jpg" alt="해동 용궁사"/>
+                        </figure>
+                        
+                        <div>
+                            <span>best</span>
+                            <h3>해둥 용궁사</h3>
+                            <p>부산시 기장군 동쪽에 자리잡은 해동 용궁사<br />
+                                바다와 가장 가까운 사찰로 알려져 있고,<br />
+                                대한민국의 관음성지의 하나
+                            </p>
+                        </div>
+                    </div><!--.item end-->
+                </div><!--.list end-->
+
+                <div class="btn">
+                    <a href="#">더 알아보기</a>
+                </div><!--.btn end-->
+            </div><!--.cont01 end-->
+
+            <div class="cont02">
+                <h2>부산시티투어</h2>
+
+                <div class="list">
+                    <div class="item">
+                        <figuer>
+                            <img src="IMG/해운대-출발.png" alt="해운대 출발 코스"/>
+                        </figuer>
+
+                        <div>
+                            <h3>해운대출발코스</h3>
+                            <p>UN기념공원 - 산만디투어 - 망햘로 전시관,<br />
+                                이바구공작소, 168계단 - 태종대 -<br />
+                                영도흰여울문화마을 - 송도해수욕장 - 스카이워크<br />
+                                - 자갈치 시장, 남포동 BIFF광장, 광복동
+                            </p>
+                            <strong>32,000원</strong>
+                        </div>
+                    </div><!--.item end-->
+
+                    <div class="item">
+                        <figuer>
+                            <img src="IMG/부산역출방.png" alt="블루라인파크"/>
+                        </figuer>
+
+                        <div>
+                            <h3>부산역출발코스</h3>
+                            <p>기장 해동용궁사 - 기장 아난티코브<br />
+                                해운대 블루라인파크 해변열차  - 미포에서 해운대<br />
+                                - 자갈치 시장, 남포동 BIFF광장, 광복동
+                            </p>
+                            <strong>36,000원</strong>
+                        </div>
+                    </div><!--.item end-->
+                </div><!--.list end-->
+
+                <div class="btn">
+                    <a href="#">예약바로가기</a>
+                </div><!--.btn end-->
+
+                <figure>
+                    <img src="img/2번.png" alt="부산시티투어캐릭터"/>
+                </figure>
+            </div><!--.cont02 end-->
+        </div><!--.cont_wrap end-->
+
+        <div class="call">
+            <a href="tel:1833-5880">문의전화 : 1833-5880</a>
+        </div><!--.call end -->
+    </div> <!--.wrap end -->
+</body>
+</html>
