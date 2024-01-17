@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    line-height: 1;
+    color: #333;
+}
+.header {
+    width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header nav .gnd {
+    display: flex;
+    text-align: center;
+}   
+.header nav .gnd .depth01 {
+    position: relative;
+}
+.header nav .gnd .depth01 > a {
+    line-height: 100px;
+    padding: 0 30px;
+}
+.header nav .gnd .depth01:hover > a {
+    color: #679222;
+}
+.header nav .gnd .depth01 .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #074111b3;
+    display: none;
+}
+.header nav .gnd .depth01 .depth02 li {
+    padding: 10px 0;
+}
+.header nav .gnd .depth01 .depth02 li:hover {
+    color: #fff;
+}
+.header nav .gnd .depth01:hover .depth02 {
+    display: block;
+}
+/* 💁‍♀️이번 정류장은 header02 */
+.header02 {
+    height: 100px;
+    margin: 100px 0 ;
+    background-color: hsl(83, 92%, 33%);
+}
+.header02 .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header02 .inner nav{
+    height: 100%;
+}
+.header02 .inner nav .gnb{
+    height: 100%;
+}
+.header02 .inner nav .gnb .depth01 {
+    display: inline-block;
+    vertical-align: top;
+    /* header 1 작성과의 차이점 */
+    padding: 0 40px;
+    /* 1차 nav 간격을 좁히고 싶을때 보고 줄여주면됨 */
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+}
+.header02 .inner nav .gnb .depth01 .depth02 {
+    line-height: 1;
+    display: none;
+    width: 200px;
+    /* 영역을 % 잡기보다는 2차 nav의 영역을 px로 잡아주는게 좋음 */
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header02 .inner nav .gnb .depth01 .depth02 li {
+    padding: 20px ;
+    background-color: #ffa667f5;
+}
+.header02 nav .gnb .depth01:hover .depth02 {
+    display: block;
+}
+

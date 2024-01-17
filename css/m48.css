@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid #000;
+    background-color: rgba(255, 255, 255, 0.17);
+}
+
+.header .inner {
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .pc_nav .gnb {
+    display: flex;
+    gap: 20px;
+}
+
+/* header end */
+
+.cont01 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 160px auto;
+}
+
+.cont01 .inner .title {
+    margin-bottom: 50px;
+}
+
+.cont01 .inner .title h3 {
+    font-size: 45px;
+    font-style: bold;
+    margin-bottom: 10px;
+}
+
+.cont01 .inner .title p {
+    font-size: 22px;
+}
+
+.cont01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner .list .item {
+    width: 48.75%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont01 .inner .list .txt {
+    font-size: 20px;
+    margin-bottom: 0;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: aliceblue;
+}
+
+.cont01 .inner .list .txt h2 {
+    margin-bottom: 10px;
+}
+
+.cont01 .inner .list .item figure {
+    max-height: 546px;
+    height: 37.91vw;
+}
+
+.cont01 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cont01 .inner .list .item .icon {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.cont01 .inner .list .item .icon figure {
+    width: 60px;
+    height: 60px;
+}
+
+.cont01 .inner .list .item .icon figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .inner .list .item02 {
+    width: 48.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont01 .inner .list .item_small {
+    position: relative;
+}
+
+.cont01 .inner .list .item_small figure {
+    height: 17.07vw;
+    max-height: 255px;
+}
+
+.cont01 .inner .list .item_small figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* cont01 end */
+
+.cont02 {
+    margin: 160px 0;
+}
+
+.cont02 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 38px;
+}
+
+.cont02 .inner .title {
+    width: 31.59%;
+    position: relative;
+}
+
+.cont02 .inner .title figure {
+    max-height: 445px;
+    height: 31.59vw;
+}
+
+.cont02 .inner .title figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .inner .title div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    text-align: center;
+    color: #333;
+}
+
+.cont02 .inner .item {
+    width: 31.95%;
+    position: relative;
+}
+
+.cont02 .inner .item_big {
+    width: 48.75%;
+}
+
+.cont02 .inner .item figure {
+    max-height: 455px;
+    height: 31.59vw;
+}
+
+.cont02 .inner .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 가상요소 */
+
+.cont02 .inner .item figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 20%, 0.344);
+    display: none;
+}
+
+.cont02 .inner .item:hover figure::before {
+    display: block;
+}
+
+.cont02 .inner .item:hover div {
+    display: block;
+}
+
+.cont02 .inner .item div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%);
+    text-align: center;
+    /* 이미지에 텍스트를 중앙으로 정렬할때 텍스트를 감싸고 있는 선택자에게 position: relative를 줘야
+    position: absolute;가 적용됨. */
+    display: none;
+    color: #fff;
+}
+
+.cont02 .inner>div:nth-child(2) {
+    order: -1;
+}
+/* cont02 end */
+.cont03 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 160px auto;
+}
+
+.cont03 .inner .title {
+    margin-bottom: 50px;
+}
+
+.cont03 .inner .title h3 {
+    font-size: 45px;
+    font-style: bold;
+    margin-bottom: 10px;
+}
+
+.cont03 .inner .title p {
+    font-size: 22px;
+}
+
+.cont03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont03 .inner .list .item {
+    width: calc(100% / 4 - 20px);
+    position: relative;
+}
+
+.cont03 .inner .list .item figure {
+    max-height: 400px;
+    height: 27.77vw;
+}
+
+.cont03 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .cont03 end */
+.cont04 .inner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cont04 .inner figure {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cont04 .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*  border-radius: 50%; */
+}
+.cont04 .inner .item p {
+    text-align: center;
+}
+

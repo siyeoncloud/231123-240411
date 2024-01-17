@@ -1,0 +1,229 @@
+@charset "utf-8" ;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+}
+
+.cont01 {
+    background-color: bisque;
+    padding: 160px 0;
+}
+
+.cont01 .inner {
+    max-width: 1440px;
+    /* 바로 위더스 값을 주면 1280px 이라는 영역에서 늘어나는것 (반응형 제작할때 주의) */
+    width: calc(100% - 30px);
+    /* 공식: 전체영역(100%) 에서 30px을 뺀 값을 출력 */
+    margin: 0 auto;
+    /* = max-width 랑 calc 미디어쿼리를 이용해도 되지만 번거로우니까 바로 스타일에 적용해주는게 편함 */
+}
+
+
+.cont01 .inner .h3 {
+    margin-bottom: 40px;
+}
+
+
+.cont01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner .list div {
+    width: 23.12%;
+    height: 400px;
+    background-color:yellowgreen;
+    font-size: 30px;
+    /* width:333px 가변 그리드 공식적용 ;
+    333 ÷ 1440 x 100 = 23.125 % (23.12 까지만 적용) 🚗p.47 참고 */
+}
+/* cont01 end  */
+.cont02 {
+    margin: 160px 0;
+}
+.cont02 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
+.cont02 .inner h1 {
+    margin-bottom: 40px;
+}
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item {
+    /* width: 333px; */
+    width: 23.12%;
+}
+.cont02 .inner .list .item figure {
+    max-height: 333px;
+    height: 23.12vw;
+    /* 높이는 %적용 안됨 -> vw 사용 */
+}
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont03 {
+    background-color: antiquewhite;
+    padding: 160px 0;
+}
+.cont03 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.cont03 .inner h1 {
+    margin-bottom: 40px;
+}
+.cont03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont03 .inner .list .item {
+    width: 23.12%;
+    max-width: 333px;
+    height: 23.12vw;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.cont03 .inner .list .item figure {
+    height: 23.12vw;
+}
+.cont03 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont03 .inner .list .item p {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    /* left를 50%를 주게 되면 화면이 작을대 줄바꿈처리가 됨 */
+    display: none;
+    color: #fff;
+
+} 
+.cont03 .inner .list .item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+ .cont03 .inner .list .item:hover::before  {
+    display: block;
+} 
+.cont03 .inner .list .item:hover p {
+    display: block;
+    z-index: 22;
+}
+.cont03 .inner .list .item:hover figure {
+    transform: scale(1.2);
+} 
+
+/* 화면의 크기가 1024일때부터 크기 변경(태블릿 시작) hover 해제 */
+@media screen and (max-width:1024px) {
+    .cont03 .inner .list .item {
+        overflow: visible;
+    }
+    .cont03 .inner .list .item p {
+        position: static;
+        /* 포지션 absolute해제 시키기 */
+        display: block;
+        transform: translateY(0);
+        color: #333;
+        font-size: 20px;
+        margin-top: 15px;   
+    }
+    .cont03 .inner .list .item:hover figure {
+        transform: scale(1);
+    }
+    .cont03 .inner .list .item:hover::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .cont01 {
+        padding: 100px 0;
+    }
+    .cont01 .inner .list {
+        flex-wrap: wrap;
+
+    }
+    .cont01 .inner .list div {
+        width: calc(100% / 2 - 10px);
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    /* cont02 시작  */
+
+    .cont02 {
+        margin: 100px 0;
+    }
+    .cont02 .inner .list {
+        flex-wrap: wrap;
+        /* flex가 있는 선택자를 찾아서 작성하기 */
+    }
+    .cont02 .inner .list .item {
+        /* 가로 456px ÷ 전체 컨테이너 크기 930px × 100 = %  */
+        width: 49.03%;
+    }
+    .cont02 .inner .list .item figure {
+        height: 49.03vw;
+        /* 공식으로 적용한 수치를 미디어 쿼리에도 적용을해야 
+        pc버전의 이미지를 정사각형으로 보일 수 있음 
+        높이는 %적용 안됨 -> vw 사용 */
+    }
+    .cont02 .inner .list .item{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    /* cont03 
+    컨테이터 크기 930px
+    cont03 아이템 넓이 456
+    cont03  이미지 높이 456 */
+
+    .cont03 .inner .list {
+        flex-wrap: wrap;
+    }
+    .cont03 .inner .list .item {
+        /* cont03 아이템 넓이 456 */
+     /* 가로 456px ÷ 전체 컨테이너 크기 930px × 100 = %  */
+        width: 49.03%;
+        height: auto;
+        /* pc에서 설정한 높이 값으로 인해 사이즈가 변형이되면 높이 값을 초기화 시켜주기 */
+        max-width: none;
+        /* 또는 인헐릿을 사용해서 초기화 시켜주기
+        위 하이값이랑 동일하게 pc 작업을 하기위해 설정한 값이 모바일로 설정시 
+        값이 변하기때문에 초기화해주기.  */
+    }
+    .cont03 .inner .list .item figure {
+        /* cont03  이미지 높이 456 */
+        height: 49.03vw;
+        
+    }
+
+}

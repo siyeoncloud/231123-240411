@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+    color: #333;
+}
+.cont01 {
+    margin: 160px 0;
+}
+.cont01 .inner {
+    max-width: 1440px;
+    /* 반응형 가로값 */
+    width: calc(100% - 30px);
+    /* 좌 우 15px */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* 선택자가 품고 있는 아이템들을 정렬을 설정시켜주기. */
+    flex-wrap: wrap;
+    row-gap: 38px;
+   /*  gap: 가로 세로 (행 * 열)
+    row-gpa: 열 
+    colum-gpa: 행; */ 
+}
+.cont01 .inner .title {
+    width: 31.59%;
+    /* 455 ( 가로값 ) ÷ 1440 ( 전체 컨테이너 영역 ) x 100 = 31.59% (타이틀이 나타내는 가로값 )  */
+    /* 여기서 타이틀에 높이 값을 적용하면 모바일 반응형에서 문제가 생겨 다시 설정해줘야하기에
+    , 밑에 figure에 높이 값을 적용시켜주기. */
+    position: relative;
+    /* div를 감싸고 있는 선택자 */
+}
+.cont01 .inner .title figure {
+    max-width: 455px;
+    height: 31.59vw;
+    /* 이렇게 설정했을 시 이미지가 가지고 있는 영역과, 결과값으로 적용해놓은 사이즈가 맞지 않음
+    figure img에 이미지 영역 잡아주기. */
+}
+.cont01 .inner .title figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .inner .title div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%);
+    text-align: center;
+    color: #000000;
+    /* 이미지에 텍스트를 중앙으로 정렬할때 텍스트를 감싸고 있는 선택자에게 position: relative를 줘야
+    position: absolute;가 적용됨. */
+}
+.cont01 .inner .item {
+    width: 31.59%;
+    /* 455 ÷  1440 × 100 = %*/
+    position: relative;
+}
+.cont01 .inner .item_big {
+    width: 48.75%;
+    /* 702 ÷  1440 × 100 = %*/
+
+}
+
+.cont01 .inner .item figure {
+    max-height: 455px;
+    height: 31.59vw;
+}
+.cont01 .inner .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 🌞 가상요소 + 호버시 백그라운드 컬러 및 텍스트 나타내기 🌞 */
+
+.cont01 .inner .item figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 20%, 0.344);
+    display: none;
+    /* 가상요소로 텍스트를 숨김처리 후 호버시 나타내기 위해서는 display none으로 없앤 후 다시 설정해주기. */
+}
+.cont01 .inner .item:hover figure::before {
+    display: block;
+}
+.cont01 .inner .item:hover div {
+    display: block;
+}
+
+/* 🌞 가상요소 + 호버시 백그라운드 컬러 및 텍스트 나타내기 🌞 */
+
+.cont01 .inner .item div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0, -50%);
+    text-align: center;
+    /* 이미지에 텍스트를 중앙으로 정렬할때 텍스트를 감싸고 있는 선택자에게 position: relative를 줘야
+    position: absolute;가 적용됨. */
+    display: none;
+    color: #fff;
+}
+.cont01 .inner > div:nth-child(2) {
+    order: -1;
+}
+
+/* 화면의 크기가 1024일때부터 크기 변경(태블릿 시작) hover 해제 */
+@media screen and (max-width:1024px) {
+    .cont01 .inner {
+        row-gap: 18px;
+    }
+    .cont01 .inner .item img div {
+        display: block;
+    }
+    .cont01 .inner .item figure::before {
+        display: block;
+        background-color: rgba(0, 0, 0, .3) ;
+    }
+}
+@media screen and (max-width:767px) {
+    .cont01 .inner {
+        row-gap: 20px;
+    }
+    .cont01 .inner .title figure {
+        display: none;
+    }
+    .cont01 .inner .title {
+        width: 100%;
+        /* display flex가 있는 한에서 바꿔야함. */
+        margin-bottom: 20px;
+        position: sticky;
+    }
+    .cont01 .inner > div:nth-child(2) {
+        order: 0;
+    }
+    .cont01 .inner .item {
+        width: 47.77%;
+    }
+    .cont01 .inner .title figure {
+        height: 44.10vw;
+    }
+    .cont01 .inner .item div {
+        position: static;
+        transform: translate(0 , 0);
+        color: #333;
+        display: block;
+    }
+    .cont01 .inner .item:hover div {
+        display: none;
+    }
+    .cont01 .inner .item figure::before  {
+        display: none;
+    }
+    .cont01 .inner .item:hover figure::before {
+        display: none;
+    }
+}

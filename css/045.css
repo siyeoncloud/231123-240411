@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(13, 59, 44);
+    color: aliceblue;
+    font-size: 150px;
+    text-align: center;
+}
+
+h1::after {
+    content: ':데스크탑';
+}
+/* 1240px 이하일 때 스타일 변화 */
+/* 태블릿 */
+
+@media screen and (max-width:1240px) {
+    body {
+        background-color: bisque;
+        font-size: 80px;
+    }
+    h1::after {
+        content: ':태블릿';
+    }
+}
+/* 767px 이하일 때 스타일 변화 */
+/* 태블릿 세로 모바일 가로  */
+@media screen and (max-width:767px) {
+    body {
+        background-color: cornflowerblue;
+        font-size: 50px;
+    }
+    h1::after {
+        content: ':모바일';
+        
+    }
+}
+/* 480px 이하일 때 스타일 변화 */
+/* 모바일 세로 적용일때  */
+@media screen and (max-width:480px) {
+    body {
+        background-color: violet;
+        font-size: 30px;
+    }
+    h1::after {
+        content: ':모바일';
+    }
+}

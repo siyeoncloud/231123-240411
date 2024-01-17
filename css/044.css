@@ -1,0 +1,253 @@
+@charset "utf-8" ;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    line-height: 1;
+    color: #333;
+}
+
+/* 💿 */
+
+#wrap {
+    max-width: 640px;
+    margin: 0 auto; 
+    background-color: bisque;
+}
+
+.inner {
+    width: calc(100% - 30px);
+    /* 그리드 영역(360px)의 좌우 15px을 (합 30px) 제외한 값을 출력 */
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+.title h3 {
+    font-size: 22px;
+}
+
+.header {
+    height: 70px;
+}
+
+.header .inner {
+    height: 100%;
+    /* 360x32 영역만큼 차지를 못하고 있기때문에 높이값을 설정해주기 */
+    display: flex;
+    /* 자식정렬역할  */
+    justify-content: space-between;
+    /* 수평정렬 */
+    align-items: center;
+    /* 중앙배치 */
+}
+/* 💿 main start */
+.main_visual {
+    height: calc(100vh - 70px);
+    position: relative;
+}
+
+.main_visual figure {
+    height: 100%;
+}
+
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* left:50% */
+    transform: translate( 0, -50%);
+    /* -50% 설정시 텍스트의 길이가 짧아짐 */
+    text-align: center;
+    /* 텍스트가 짧아짐  */
+}
+
+.main_visual div h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.cont01 {
+    margin: 60px 0;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cont01 .list .item {
+    width: 49%;
+    margin-bottom: 20px;
+}
+.cont01 .list .item figure {
+    width: 100%;
+    height: 172px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cont01 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item div {
+    margin-top: 10px;
+}
+.cont01 .list .item div p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.cont02 {
+    margin: 60px 0;
+}
+
+.cont02 .item {
+    background-color: azure;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cont02 .item .info {
+    padding: 15px;
+
+}
+.cont02 .item .info p {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.cont02 .item .info div  {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.cont02 .item .info div img {
+    width: 20px;
+}
+.cont02 .item .info div span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.cont02 .item figure {
+    height: 160px;
+}
+
+.cont02 .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* d_d */
+
+.cont03 {
+    margin: 60px 0;
+    margin-bottom: 20px;
+}
+
+.cont03 .title  {
+   text-align: center;
+}
+
+/* 스와이퍼슬라이드 시작  */
+.cont03 .slide_wrap {
+    position: relative;
+}
+.cont03 .slide_wrap .swiper {
+    position: static ;
+}
+
+.cont03 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -25px;
+}
+
+.swiper-slide figure {
+    height: 160px;
+}
+.swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: aliceblue;
+
+}
+.swiper-slide .info {
+    padding: 15px
+}
+.swiper-slide .info p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.swiper-slide .info div {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.swiper-slide .info div span {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.cont03 .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+}
+.cont03 .swiper-pagination-bullet-active {
+    background-color: blue;
+}
+
+.footer {
+    background-color: #a9a9a9;
+    color: black;
+    padding: 20px 0 ;
+    font-size: 13px;
+    text-align: center;
+}
+/* 화면의 크기가 641px이상일때 변화를 주는 미디어쿼리를 사용  */
+
+@media screen and (min-width:641px) {
+    /* 실행코드 작성 */
+    #wrap {
+        background-color: rgb(247, 0, 255);
+        max-width: 100%;
+    }
+    .inner {
+/*         max-width: 1280px; */
+    }
+    .cont01 .list .item{
+      width: calc(100% / 4 - 7px );
+    }
+}
+
+

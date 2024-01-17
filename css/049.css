@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    text-decoration: none;
+}
+
+.inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+.cont01 .inner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* .cont01 .inner .item으로도 따로 magin값을 줘도 됨  */
+}
+.cont01 .inner figure {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #333;
+    /* figure에  border-radius: 50%; 줄때는 overflow: hidden;를 같이 설정해줘야함  */
+}
+
+/* figure img or figure 에 border-radius를 넣어도 되지만 넣을때 단독으로 들어가거나 더 필요한 태그가 있는지 확인하기.  */
+.cont01 .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*  border-radius: 50%; */
+}
+
+.cont01 .inner .item figure img + img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    opacity: 0;
+   /*  transform: translateY(-50%); */
+}
+.cont01 .inner .item:hover figure img + img {
+    opacity: 1;
+    
+}
+
+.cont01 .inner .item p {
+    text-align: center;
+}
+
+/* 🛤🛤🛤🛤🛤🛤🛤🛤cont02 이미지 텍스트 50 50🛤🛤🛤🛤🛤🛤🛤🛤🛤🛤 */
+
+.cont02 .list {
+    display: flex;
+}
+
+.cont02 .list figure {
+    width: 50%;
+    height: 770px;
+    height: 40.10vw;
+}
+
+.cont02 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .list .text {
+    width: 50%;
+    background-color: rgb(78, 89, 175);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 강제로 세로 정렬
+    이 태그를 사용하면 justify-content은 세로정렬로 바뀌게됨 */
+    text-align: center;
+    padding: 0 50px;
+}
+
+.cont02 .list .text h3 {
+    margin-bottom: 30px;
+}
+/* 🛤🛤🛤🛤🛤🛤🛤🛤cont03🛤🛤🛤🛤🛤🛤🛤🛤🛤🛤 */
+
+.cont03 .title {
+    margin-bottom: 50px;
+}
+
+.cont03 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont03 .list .item {
+    width: calc(100% / 4 - 20px);
+    position: relative;
+}
+
+.cont03 .list .item figure {
+    /*   height: 400px; */
+    max-width: 770px;
+    height: 27.77vw;
+}
+
+.cont03 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont03 .list .item h4 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+
+.cont03 .list .item:hover h4 {
+    display: block;
+}
+/* 🛤🛤🛤🛤🛤🛤🛤🛤미디어쿼리 반응형 설정🛤🛤🛤🛤🛤🛤🛤🛤🛤🛤 */
+
+@media screen and (max-width:1100px) {
+    .cont01 .inner {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .cont03 .list .item h4 {
+        position: static;
+        transform: translateY(0);
+        color: #333;
+        display: block;
+    }
+    .cont03 .list .item {
+        width: calc(100% / 4 - 10px);
+    }
+}
+@media screen and (max-width:890px) {
+    
+    .cont02 .list figure {
+        height: auto;
+    }
+    .cont02 .list .text {
+        padding: 30px;
+    }
+    .cont02 .list .text h3 {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:767px) {
+    .cont03 .list {
+        flex-wrap: wrap;
+    }
+    .cont03 .list .item {
+        width: calc(100% / 2 - 10px);
+    }
+    .cont03 .list .item figure {
+       /*  height: 548px;
+        960px (컨테이너 사이즈)
+        548 ÷ 960 × 100 = vw 값 */
+        height: 57.08vw;
+    }
+}
+@media screen and (max-width:480px) {
+    .cont01 .inner {
+        gap: 30px;
+        text-align: center;
+    }
+    .cont01 .inner figure {
+        width: 100px;
+        height: 100px;
+    }
+    .cont02 .list {
+        display: block;
+    }
+    .cont02 .list figure {
+       /*  컨테이너크기 414px 
+        높이 333px
+        333 ÷ 414 × 100 = vw 값 */
+        height: 80.43vw;
+        width: 100%;
+        /* .cont02 .list figure *pc 설정으로는 텍스트 50 이미지 50으로 잡혀있기에 영역을 하나당 100으로 잡아주면 여백이 사라짐 */
+    }
+    .cont02 .list .text {
+        width: 100%;
+    }
+    
+}
+
+/* 1024 / 767 ( 호버작용 x , 태블릿 적용으로 변경함 but 1024 - 767 사이에서 디자인이 틀어지는 경우가 생기기때문에 
+그사이 960 890 을 사이에 미디어쿼리를 적용해 틀어지는 디자인을 수정함.)
+767 - 420 에 디자인이 틀어지는 경우에는 480에서 미디어쿼리를 통해 디자인 수정
+420 아래로 가는 경우에는 380 - 360 ( 사용해야하는 이미지 사진에 따라 미디어쿼리를 통해 수정함. 최소 320까지는 맞춰야함 )
+280 갤럭시 폴드의 반정도의 여백. (지금은 조금 더 크기 때문에 ㄱㅊ 을지도 .. ) */

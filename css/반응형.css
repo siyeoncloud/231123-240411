@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+    color: #333;
+}
+
+.cont01 {
+    background-color: #ebbbce;
+    padding: 160px 0;
+}
+.cont01 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.cont01 .inner h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.cont01 .inner p {
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+.cont01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .inner .list .item {
+    width: 48.75%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cont01 .inner .list .item figure {
+    max-height: 546px;
+    height: 37.91vw;
+}
+.cont01 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .inner .list .item p { 
+    font-size: 20px;
+    margin-bottom: 0;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: aliceblue;
+    display: none;
+}
+.cont01 .inner .list .item .icon {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+.cont01 .inner .list .item .icon figure {
+    width: 60px;
+    height: 60px;
+}
+.cont01 .inner .list .item .icon figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .inner .list .item02 {
+    max-width: 1440px;
+    width: 48.75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cont01 .inner .list .item_small figure {
+    max-height: 255px;
+    height: 17.07vw;
+}
+.cont01 .inner .list .item_small figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .inner .list .item p:hover {
+    display: block;
+}
+.cont01 .inner .list .item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
