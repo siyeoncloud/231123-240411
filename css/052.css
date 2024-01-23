@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    line-height: 1;
+    color: #333;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    /* 10px (고정) = 62.5% (유동적)  */
+}
+
+.wrap {
+    font-size: 18px;
+    line-height: 1.3;
+    /* 기본적으로 1.3 ~ 1.8을 주로 사용 */
+}
+
+.cont01 {
+    margin: 13rem 0;
+    /* margin 130px 0 */
+}
+
+.cont01 .title {
+    font-size: 4rem;
+    /* 40px */
+    text-align: center;
+    margin-bottom: 5rem;
+    /* 50px */
+}
+
+.cont01 .item {
+    /* width: calc(100% - 200px); <<이 방법도 사용가능하지만
+    작은 화면에서는 여백이 너무 크게보임 */
+    width: calc(100% - 10.41%);
+    /* 200 (여백) ÷ 1920(가로 컨테이너값) × 100 = 10.41% */
+    margin: 0 auto;
+    position: relative;
+}
+
+.cont01 .item div {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont01 .item figure {
+    max-height: 600px;
+    height: 31.25vw;
+    /*  600 (가로값) ÷ 1920(가로 컨테이너값) × 100*/
+}
+
+.cont01 .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .item div h4 {
+    font-size: 3.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.cont02 {
+    background: url(../img/cont02_bg.jpg) center center / cover no-repeat;
+    padding: 13rem 0;
+    color: #fff;
+}
+
+.cont02 .inner {
+    /*  max-width: 1280px;
+    margin: 0 auto;
+    이렇게 설정하면 아래에 1280px 이라는 여백으로 인해 스크롤이생김
+    미디어 쿼리로 설정이 가능하지만 번거롭기때문에 max-width와 width 를 이용해
+    한번에 설정해주는게 제일 편함 */
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cont02 .inner .title {
+    /* 1. 408(width) ÷ 1280 ( 컨테이너값) × 100 => 31.87%
+       2. width: calc(100% (전체영역) - 65.93%(list영역) - 28px (사이값 ); */
+    width: calc(100% - 65.93% - 28px);
+    /*  background-color: aqua; */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.cont02 .inner .title h3 {
+    font-size: 6rem;
+    margin-bottom: 2.5rem;
+}
+
+.cont02 .inner .title p {
+    font-size: 2.4rem;
+}
+
+.cont02 .inner .list {
+    /* background-color: burlywood; */
+    width: 65.93%;
+    /*  844(width) ÷ 1280 ( 상위 컨테이너값) × 100 */
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    /* margin bottom으로 60을 주고 
+    item에 margin bottom 0을 줘도 동일함. */
+
+}
+
+.cont02 .inner .list .item {
+    width: 61.25%;
+    /*  517(width) ÷ 844 ( 상위 컨테이너값) × 100 */
+}
+
+.cont02 .inner .list .item figure {
+    max-height: 517px;
+    /* 1280px보다 클때는 px 작을때는 vw 사이즈로 적용됨. */
+    height: 40.39vw;
+    /*  517(width) ÷ 1280 ( 상위 컨테이너값) × 100
+      원래는 상위 list 844로 해야하지만, 반응형을 위해서 1280px 이라는 범위
+      안에서 계산식을 적용 */
+
+}
+
+.cont02 .inner .list .item:nth-child(2) {
+    margin-left: auto;
+    /* 왼쪽으로 붙이고 싶으면 right auto를 사용하면됨. */
+}
+
+.cont02 .inner .list .item div {
+    margin: 3rem 20px 0;
+}
+
+.cont02 .inner .list .item div h4 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.cont02 .inner .list .item div a {
+    font-size: 14px;
+    margin-top: 2.7rem;
+    display: inline-block;
+    position: relative;
+}
+
+.cont02 .inner .list .item div a::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../img/item__btn--plus.png) 0 0 / 100% no-repeat;
+    display: block;
+    position: absolute;
+    right: -25px;
+    /* top 50%
+    transform: translate(-50%); */
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1024px) {
+
+    html,
+    body {
+        font-size: 50%;
+    }
+
+    #wrap {
+        font-size: 16px;
+    }
+
+    .cont01 .item {
+        width: 100%;
+    }
+
+    .cont02 .inner .title {
+        width: calc(100% - 65.93% - 16px);
+        word-break: keep-all;
+        /* 화면 사이즈를 줄였을때 타이틀영역이 작아지면서 글자가 단어로 떨어지게하는태그 */
+    }
+
+    .cont02 .inner .list .item {
+        width: 74.34%;
+        /*  452(width) ÷ 608 ( 상위 컨테이너값) × 100 */
+    }
+    .cont02 .inner .list .item figure {
+        height: 47.08vw;
+        /*  452(width) ÷ 960 ( 상위 컨테이너값) × 100 */
+    }
+
+    .cont02 .inner .list .item div {
+        margin-left: 0;
+    }
+
+}
+@media screen and (max-width:840px) {
+    .cont02 {
+        word-break: keep-all;
+    }
+    .cont02 .list br {
+        display: none;
+    }
+}
+@media screen and (max-width:767px) {
+    .cont02 .inner {
+        display: block;
+    }
+    .cont02 .inner .title {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .cont02 .inner .list {
+        width: 100%;
+    }
+}
+@media screen and (max-width:480px) {
+    html,
+    body {
+        font-size: 37.5%;
+        /* font-size : 6px */
+    }
+    #wrap {
+        font-size: 14px;
+    }
+    .cont01 .title {
+        word-break: keep-all ;
+    }
+    .cont01 .title br {
+        display: none;
+    }
+    .cont01 .item figure {
+        height: 600px;
+    }
+    .cont02 .inner .title {
+        position: static;
+    }
+    .cont02 .inner .title p  {
+        font-size: 16px;
+    }
+    .cont02 .inner .list .item {
+        width: 100%;
+    }
+    .cont02 .inner .list .item figure {
+        height: 90.52VW;
+    }
+}

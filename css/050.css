@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    font-size: 62.5%;
+}
+.cont01 {
+    font-size: 16px;
+    background-color: greenyellow;
+}
+.cont01 .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    font-size: 2em;
+}
+.cont01 .inner .title {
+    text-align: center;
+/*     margin-bottom: 40px; */
+    margin-bottom: 4rem;
+}
+.cont01 .inner .title p {
+    font-size: 2em;
+}
+.cont01 .inner .title h3 {
+    font-size: 60px;
+}
+.cont01 .inner .item {
+/*     height: 400px; */
+    height: 40rem;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: #fff;
+}
+.cont01 .inner .item h4 {
+    font-size: 2rem;
+}
+.cont01 .inner .item h3 {
+    font-size: 1rem ;
+}
+/* 
+px
+가변단위 vw vh %(대표적으로) rem */
+
+@media screen and (max-width:767px) {
+    html , body {
+        font-size: 10px;
+    }
+    .cont01 .inner .title h3 {
+        font-size: 40px;
+    }
+}
