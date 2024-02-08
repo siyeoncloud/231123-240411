@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션이미지</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cont {
+            max-width: 767px;
+            width: calc(100% - 20px);
+            margin: 50px auto;
+        }
+        .cont figure {
+            height: 50vh;
+            overflow: hidden;
+            border: 5px solid #bbb;
+            border-radius: 15px;
+        }
+        .cont figure img {
+            width: 100%;
+            animation: imgeslide 20S infinite linear;
+        }
+
+        @keyframes imgeslide {
+            0% {
+                transform: translateY(-100%);
+            }
+           100% {
+            transform: translateY(0);
+           }       
+        }
+    </style>
+</head>
+<body>
+    <section class="cont">
+        <figure>
+            <img src="img/page_all.png" alt="img">
+        </figure>
+        <div>
+            <h4>리뉴얼 비에메종</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Assumenda similique optio amet praesentium nam, earum et qui pariatur, sed unde, vitae ea! Iste laudantium reiciendis exercitationem? Commodi nihil nisi facere?</p>
+        </div>
+    </section><!-- .cont end -->
+</body>
+</html>

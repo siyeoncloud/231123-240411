@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            text-align: center;
+        }
+
+        .btn button {
+            width: 40px;
+            height: 40px;
+        }
+
+        .btn span {
+            font-size: 25px;
+            margin: 0 20px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            /*  alert () ; */
+            let btnwrap = document.getElementsByClassName('btn')[0];
+            let downBtn = btnwrap.getElementsByClassName('down')[0];
+            let num = btnwrap.getElementsByClassName('num')[0];
+            let upBtn = btnwrap.getElementsByClassName('up')[0];
+            //증감 연산자: 1씩 증가 + 
+            //감소 연산자: 1씩 감소 - 
+            let i = 0;
+            /* 초기값 */
+            upBtn.addEventListener('click' , () => {
+                i++;
+                console.log(i);
+                num.innerHTML = i;
+            });
+            downBtn.addEventListener('click', () => {
+                i--;
+                console.log(i);
+                //i값이 <  0보다 작아졌을 때 i값을 0으로 설정 * -로 내려가지않게 if로 설정하기
+                if( i < 0 ) {
+                    i = 0 
+                } 
+                num.innerHTML = i;
+            }); //감소값 실행
+
+
+
+        }//script end
+    </script>
+</head>
+
+<body>
+    <div class="btn">
+        <button class="down">-</button>
+        <span class="num">0</span><!-- 스크립트에서 실행할때 i 값이 지정이 되어있으면 0의 숫자는 무의미함. -->
+        <button class="up">+</button>
+    </div>
+</body>
+
+</html>

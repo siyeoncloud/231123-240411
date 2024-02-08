@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/053.css">
+</head>
+
+<body>
+    <div class="form">
+        <form action="">
+            <!-- action: 폼태그 안에 있는 정보를 서버쪽으로 전달하는 경로
+            method: 전송방법 
+            * method: "post" (보완, url주소에 정보 안보임)
+              method: "get" (url주소 안에 form에 담겨있는 정보가 보임) -->
+            <h3>가입양식작성</h3>
+            <fieldset><!-- form안에 영역구분 -->
+                <legend>개인정보입력</legend>
+                <div class="box">
+                    <label for="name">이름</label>
+                    <!-- div로 설정 후 for 값을 넣어도 적용이안됨 label만 가능 -->
+                    <input type="text" id="name" placeholder="이름을 작성해주세요.">
+                </div><!-- .box end -->
+
+                <div class="box">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" placeholder="비밀번호를 입력해주세요.">
+                </div><!-- .box end -->
+                <div class="box">
+                    <label for="">주소</label>
+                    <input type="button" value="주소찾기">
+                    <input type="text" placeholder="나머지 주소를 입력해주세요.">
+                </div>
+
+                <div class="box">
+                    <label for="">언어선택</label>
+                    <ul>
+                        <li>
+                            <input type="radio" id="html" name="web" value="html" checked>
+                            <label for="html">HTML</label>
+                            <!-- .name 그룹이름 / vlaue 개인이름 -->
+                        </li>
+                        <li>
+                            <input type="radio" name="css" name="web" value="css" checked>
+                            <label for="css">CSS</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="js" name="web" value="js" checked>
+                            <label for="is">JS</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <label for="">관심분야</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="interest" value="coding" checked>
+                            <span>코딩</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="interest" value="desgin">
+                            <span>디자인</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <strong>관련사이트</strong>
+                    <select name="web" id="" onchange="window.open(value, '_blank')">
+                        <option value="https://daum.net">다음</option>
+                        <option value="https://www.naver.com">네이버</option>
+                        <option value="https://google.co.kr">구글</option>
+                    </select>
+                </div><!-- .box end -->
+
+                <div class="btn">
+                    <input type="reset" value="다시쓰기">
+                    <input type="submit" value="가입하기">
+                </div><!-- .btn end -->
+            </fieldset>
+        </form>
+    </div><!-- .form end -->
+</body>
+
+</html>

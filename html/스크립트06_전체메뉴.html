@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체메뉴</title>
+    <link rel="stylesheet" href="css/스크립트06.css">
+
+    <script>
+        window.onload = () => {
+            let wrap = document.getElementById('wrap');
+            /* id 명은 고유의 이름이기에 뒤에 index값이 필요하지않음. */
+            let menuBtn = document.getElementsByClassName('menu_open')[0];
+            let nav = document.getElementsByTagName('nav')[0];
+
+            menuBtn.addEventListener( 'click', () => {
+              if (getComputedStyle(nav).display === 'none') {
+                nav.style.display = 'block' ;
+
+                wrap.classlist.add('on');
+              }else {
+                nav.style.display = 'none' ;
+                wrap.classList.remove('on');
+                /* 삭제하고싶은 변수명을 작성할때 쓰는 태그 */
+              }
+            });
+        }//script end
+        
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header" id="header">
+            <div class="inner">
+                <h1>
+                    <a href="#">logo</a>
+                </h1>
+            
+                <button class="menu_open">
+                    <img src="img/open-menu.png" alt="메뉴보기">
+                </button><!-- .menu_open end -->
+
+                <nav>
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">포토샵</a>
+                            <ul class="depth02">
+                                <li><a href="#">펜툴</a></li>
+                                <li><a href="#">색상보정</a></li>
+                                <li><a href="#">합성</a></li>
+                                <li><a href="#">텍스트</a></li>
+                                <li><a href="#">도형</a></li>
+                            </ul><!-- .depth02 end -->
+                        </li><!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <a href="#">일러스트</a> 
+                        </li><!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <a href="#">피그마</a>
+                        </li><!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <a href="#">HTML</a>
+                        </li><!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <a href="#">CSS</a>
+                        </li><!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <a href="#">JS</a>
+                        </li><!-- .depth01 end -->
+                    </ul><!-- .gnb end -->
+                </nav>
+            </div><!-- .inner end -->
+        </header><!-- .header end -->
+
+        <main id="main">
+            <section class="main_visual">
+                <img src="" alt="겨울">
+            </section><!-- .main_visual end -->
+        </main><!-- .main end -->
+
+    </div><!-- #wrap end -->
+</body>
+</html>

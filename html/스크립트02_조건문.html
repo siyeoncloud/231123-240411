@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        //if문
+        //if , else if , ...
+        //if(조건식) {스크립트코드}
+        /* if (조건식) {조건이 맞으면 실행될 스크립트 코드}
+        else if(조건식02) {조건식02가 맞으면 실행될 스크립트 코드}
+        else if(조건식03) {조건식03이 맞으면 실행될 스크립트 코드}
+        else {조건이 맞지 않을 때 실행 될 스크립트 코드} */
+        //else는 무한으로 사용가능
+
+        /*if(조건식) {
+            if(다른조건식) {조건이 맞으면 실행}
+            else {
+                또 다른 조건식이 맞지 않으면 실행
+        }}*/
+
+        let num = 10;
+        if(num > 100) {
+            document.write('hello');
+        }else {
+            document.write('🍒🍑🍒')
+        }
+
+        let userName = prompt('방문자의 이름은?', '🧚‍♀️')
+        if(userName) {
+            document.write(userName + '님 방문을 환영합니다.');
+        }
+    </script>
+</body>
+</html>

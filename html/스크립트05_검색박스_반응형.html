@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색박스+반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+        }
+        .header {
+            height: 100px;
+            border-bottom: 1px solid #333;
+        }
+
+        .header .inner {
+            max-width: 1280px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .header .inner p img {
+            height: 30px;
+        }
+        .header .inner .gnb {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            //menu를 클릭했을때 메뉴 + li 들이 나타남 * li들에게 백그라운드 컬러 및 밑줄 형성 ... ^^ 
+            //menu를 클릭했을때 메뉴가 사라짐
+            let menuBtn = document.getElementsByClassName('menu_nav')[0];
+            let menuOpen = document.getElementsByClassName('gnb')[0];
+            menuBtn.addEventListener('click', () => {
+                /* alert (); */
+                if(getComputedStyle(menuOpen).display === 'none') {
+                   menuOpen.style.display ='block';
+                }else {
+                    menuOpen.style.display ='none';
+                }
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header" id="header">
+            <div class="inner">
+                <h1>💻</h1>
+                <div class="menu menu_nav">
+                    <p><img src="img/open-menu.png" alt="메뉴"></p>
+                </div><!-- .menu menu_nav end -->
+                <ul class="gnb">
+                    <li>포토샵</li>
+                    <li>일러스트</li>
+                    <li>피그마</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ul>
+            </div><!-- .inner end -->
+        </header>
+    </div><!-- #wrap end -->
+
+</body>
+
+</html>

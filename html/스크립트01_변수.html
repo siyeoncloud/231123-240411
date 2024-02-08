@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .image {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <strong></strong>
+    <div class="box">
+        <figure><img class="image" src="img/홈페이지제작/겨울01.jpg">
+        </figure>
+        <button class="btn">🟣</button>
+        <!-- 버튼태그 -->
+    </div>
+
+    <script>
+        /*  변수선언방법: var, let ,conts / let const 주로 사용
+            변수선언 변수명 = '데이터 값'
+           ✅ 변수명 영문으로 시작 뒤에 숫자 + - , _ 
+           ✅ 시작은 소문자 뒤에 이어질 단어가 있을 시 단어 시작은 대문자
+           ex) searchBox => 낙타표기법(카멜표기법)*/
+        const p = document.getElementsByTagName('p')[0];
+        /* 첫번째 p 태그를 변수명으로 지정함 */
+        var a = 100;
+        var b = 200;
+        var a = 300;
+        /* var는
+        ⭕ 변수명 중복사용 가능
+        ⭕ 할당 가능 */
+        /* 선택자 먼저 작성된 a(100)보다 뒤에 작성된 a(300)을 우선순위로 계산되어 나타남 */
+        b = '200';
+        /* 태그 = '200'는 문자형 var a = 100; 숫자형
+        숫자 + 숫자 로 계산된게 아니라 문자형이라서 나란히 화면에 보이는값 */
+        p. innerHTML = a+b; 
+        /* a , b , a+b var(변수)에 대한 값을 출력해주는 태그
+        식 , 날짜 , 변화되는 값 , 나누기 등 계산이 가능함 * 가독성 및 빠른 데이터출력을 위해 사용  */
+        /* let c = 300; */
+        let d = 500;
+        let c = 200;
+         /* let은
+        ❌ 변수명 중복사용 불가능
+        ⭕ 할당 가능 */
+
+        const e = '문자문자' ;
+        const f = 200;         
+       /*  const e = '데이터값';
+        f = 100; */
+         /* const는
+        ❌ 변수명 중복사용 불가능
+        ❌ 할당 불가능
+        = 고유의 변수명이기에 id 랑 동일*/    
+        const strong = document.getElementsByTagName('strong')[0];
+        let iTag = '<i>이탤릭체<i>';
+        strong.innerHTML = iTag;     
+        /* strong.innerText = iTag; */
+        /* innerText 글자로 인식하기에 <i>이탤릭체<i>의 전체가 나타남
+           innerHTML 태그로 인식하기에 <i>를 제외한 이탤릭체만 나타남  */  
+        strong.style.color = 'blue';
+        
+        //버튼을 클릭했을때 실행 + 이미지 변경
+        let image = document.getElementsByClassName('image')[0];
+        let imagebtn = document.getElementById('btn');
+        /* id 명은 index 값(순서값)은 설정하지 않아도됨  */
+        imagebtn.addEventListener('click', () => {
+            image.src = 'img/크림.jpg';
+        });
+
+    </script>
+</body>
+</html>

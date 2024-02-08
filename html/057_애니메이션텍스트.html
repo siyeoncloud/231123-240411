@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션텍스트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .text_slide {
+            background-color: yellow;
+            color: #bbb;
+            padding: 20px 0;
+            font-size: 40px;
+            overflow: hidden;
+        }
+
+        .text_slide p {
+            white-space: nowrap;
+            /* 줄바꿈처리가 되지 않는 태그 */
+            animation: text_slide 10s infinite linear;
+        }
+
+        .text_slide2 {
+            background-color: rgb(255, 129, 32);
+            color: #ffffff;
+            transform: skewY(5deg);
+            /* 035transfrom기울기참고 */
+        }
+
+        .text_slide2 p {
+            white-space: nowrap;
+            animation: text_slide2 10s infinite linear;
+        }
+
+        @keyframes text_slide {
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes text_slide2 {
+            /* 정반대로 설정해주기 */
+            0%{
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text_slide">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error aliquid
+            obcaecati similique molestiae ipsam atque qui neque tenetur eos, eveniet harum eligendi nulla sed culpa
+            iure? Assumenda nam ducimus dolorum?</p>
+    </div>
+    <div class="text_slide text_slide2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error aliquid
+            obcaecati similique molestiae ipsam atque qui neque tenetur eos, eveniet harum eligendi nulla sed culpa
+            iure? Assumenda nam ducimus dolorum?</p>
+    </div>
+</body>
+
+</html>

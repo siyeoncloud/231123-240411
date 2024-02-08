@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼클릭시이미지변경</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 500px;
+            margin: 50px auto;
+        }
+        .box figure {
+            height: 500px;
+        }
+        .box figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box button {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(192, 192, 192);
+        }
+    </style>
+    <script>
+        //body내용을 다 읽은 다음에 스크립트 실행
+        window.onload = () => {
+            let image = document.getElementsByTagName('img')[0];//이미지태그
+            let btn = document.getElementsByTagName('button')[0];//button태그
+
+            btn.addEventListener('click',() => {
+                if(getComputedStyle(btn).backgroundColor === 'rgb(192, 192, 192)' ) {
+                   /*  alert(); */
+                   image.src ='img/구.jpg';
+                   btn.style.backgroundColor = '#fff' ;
+                   btn.style.color = '#000';
+                } else {
+                    image.src = 'img/배경/KakaoTalk_20231215_161009434.jpg';
+                    btn.style.backgroundColor = 'rgb(192, 192, 192)' ;
+                   btn.style.color = '#fff';
+
+                }
+            });
+        } //script end
+    </script>
+</head>
+<body>
+    <div class="box">
+        <figure><img src="img/배경/KakaoTalk_20231215_161009434.jpg">
+        </figure>
+        <button>이미지변경</button>
+    </div><!-- .box end -->
+</body>
+</html>

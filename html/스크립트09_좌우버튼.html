@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 600px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .item figure {
+            height: 600px;
+        }
+
+        .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item .btn_wrap button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            width: 50PX;
+            height: 50PX;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .item .btn_wrap button.next {
+            width: 50px;
+            height: 50px;
+            left: auto;
+            right: 0;
+        }
+
+        .item .page {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 600px;
+            display: flex;
+            align-items: flex-end;
+        }
+        span {
+            color: #fff;
+        }
+        .text {
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let item = document.getElementsByClassName('item')[0];
+            let itemImage = item.getElementsByTagName('img')[0];
+            let pervBtn = item.getElementsByClassName('perv')[0];
+            let nextBtn = item.getElementsByClassName('next')[0];
+            let pageNum = item.getElementsByClassName('num')[0];
+            let pageAll = item.getElementsByClassName('page_all')[0];
+
+            let image1 = 'img/여름2.jpg';
+            let image2 = 'img/금붕어.jpg';
+            let image3 = 'img/금붕어2.jpg';
+            let imagewrap = [image1, image2, image3]
+
+            let i = 0;
+
+            pageAll.innerHTML = '/ ' + imagewrap.length;
+
+            nextBtn.addEventListener('click', () => {
+                i++;
+                console.log(i);
+
+                if (i >= imagewrap.length) { i = 0; }
+                itemImage.src = imagewrap[i];
+                pageNum.innerHTML = i + 1;
+            })/* nextBtn,click */
+
+            pervBtn.addEventListener('click', () => {
+                i--;
+
+                if (i <= imagewrap.length) { /* i = 2; */ i = imagewrap.length - 1; }
+                itemImage.src = imagewrap[i];
+                pageNum.innerHTML = i + 1;
+            })//pervBtn
+        }//script end
+    </script>
+</head>
+
+<body>
+    <div class="item">
+        <figure>
+            <img src="img/여름.jpg">
+        </figure>
+        <div class="text">
+            <h3>여름</h3>
+            <p>💭</p>
+        </div><!-- .text end -->
+        <div class="btn_wrap">
+            <button class="perv">이전</button><!-- .perv end -->
+            <button class="next">다음</button><!-- .next end -->
+        </div><!-- .btn_wrap end -->
+        <div class="page">
+            <span class="num">1</span>
+            <span class="page_all"></span>
+        </div><!-- .page end -->
+    </div><!-- .item end -->
+</body>
+
+</html>

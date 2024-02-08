@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼으로 이미지변경</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            width: 400px;
+            margin: 50px auto;
+        }
+        .box figure {
+            height: 400px;
+        }
+        .box figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .box button {
+            width: 100%;
+            height: 50px;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            let item = document.getElementsByClassName('box')[0];
+            let itemImage = item.getElementsByTagName('img')[0];
+            let itemBtn = item.getElementsByClassName('btn')[0];
+
+            let image1 = 'img/고양이2.jpg';
+            let image2 = 'img/고양이3.jpg'; 
+            let image3 = 'img/고양이4.jpg';
+            let imagewrap = [image1, image2, image3]
+            //배열 : 이름(변수명, 데이터값), 인덱스로 구성된 집합체;
+
+            let i = 0;
+
+            itemBtn.addEventListener('click', () => {
+                i++;
+                console.log(i);
+
+                //조건식: i 값이 3보다 크거나 같을때 * i값을 0으로 설정
+                itemImage.src = imagewrap[i];
+                console.log(i);
+                if(i >= imagewrap.length ) {
+                    i = 0
+                }
+            });
+
+        }//script end
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <figure>
+            <img src="img/고양이.jpg" alt="배경">
+        </figure>
+        <button class="btn">
+                ✔
+        </button>
+    </div>
+</body>
+</html>

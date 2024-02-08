@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .ball {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(0, 0, 0);
+
+            animation-name: ball;
+            /* 애니메이션 태그의 이름설정 */
+            animation-duration:2s;
+            /* 애니메이션 실행시간 or 동작시간 */
+            animation-iteration-count: infinite;
+            /* 반복 횟수설정 ( 무한반복 : infinite ) */
+            animation-direction: alternate-reverse;
+            /* 방향설정태그
+            alternate: 정방향 재생 후 역방향 재생
+            reverse: 역방향재생
+            alternate-reverse: 역방향 재생 후 정방향 재생  */
+        }
+
+        .ball2 {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            border-radius: 50%;
+            animation:ball2 0.7s infinite alternate linear;
+            /* 이름 실행시간 횟수 방향 속도:linear (일정하게 움직임)*/
+        }
+        @keyframes ball {
+            /* keyframes : 설정애니메이션이름
+            처음 중간 끝으로 설정이 가능 */
+            0% {}
+            50% {}
+            100% {
+                background-color:rgb(225, 77, 109);
+                border-radius: 50%;
+            }
+
+        }
+
+        @keyframes ball2 {
+            0%{
+            transform: translateY(0);
+            }
+            50% {
+                transform: translateX(200px) translateY(200px) ;    
+            }
+            100%{
+            height: 70px;
+            transform: translateY(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div><!-- .ball end -->
+    <div class="ball2"></div>
+</body>
+</html>

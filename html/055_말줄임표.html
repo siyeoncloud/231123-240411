@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #333;
+            line-height: 1;
+        }
+
+        .cont {
+            max-width: 1280px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+
+        .cont h3 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cont .list {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont .list div {
+            width: calc(100% / 4 - 10px);
+            background-color: bisque;
+            padding: 30px;
+            border-radius: 10px;
+
+            container-type:inline-size;
+            container-name:item-box;
+        }
+        .cont .list div:first-child {
+            white-space: nowrap; /* 단락이 떨어지지않고 한줄로 표시됨. */
+            text-overflow: ellipsis;
+            /* 말 줄임표의 기호를 만들어주는 태그 ... ,, */
+            overflow: hidden;
+            /* 말줄임을 이용할 선택자의 부모말고 p태그를 이용해야함. */
+        }
+        .cont .list div:nth-child(2) p {
+            display: -webkit-box; /* 박스설정 */
+            -webkit-box-orient: vertical;/* 박스방향설정: 세로 */
+            -webkit-line-clamp: 2 ;/* 박스안에 보여주고자 하는 라인 수 : 숫자 (영역들을 벗어나고자 하는 텍스트들은 숨김처리) */
+            overflow: hidden; 
+        }
+        .cont .list div:nth-child(3) p {
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp: 3 ;
+            overflow: hidden;
+        }
+
+        @container item-box (max-width: 200px) {
+            /* 컨테이너 쿼리
+            부모에게 컨테이너 쿼리 설정 
+            container-type:inline-size;
+            → 컨테이너 쿼리 설정된 요소의 사이즈에 따라 스타일 변경 */
+            .cont .list div:last-child p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow:hidden;
+            }
+        }
+        @media screen and (max-width:767px) {
+            .cont .list {
+                flex-wrap: wrap;
+            }
+            .cont .list div {
+            width: calc(100% / 2 - 10px);
+            margin-bottom: 20px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <section class="cont">
+        <h3>말줄임표</h3>
+        <div class="list">
+            <div>
+                <h4>cont title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius excepturi,
+                     fugiat accusamus unde reiciendis hic inventore asperiores fuga deserunt modi earum tenetur magnam provident praesentium blanditiis distinctio autem, rem quidem.</p>
+            </div>
+
+            <div>
+                <h4>cont title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius excepturi,
+                     fugiat accusamus unde reiciendis hic inventore asperiores fuga deserunt modi earum tenetur magnam provident praesentium blanditiis distinctio autem, rem quidem.</p>
+            </div>
+
+            <div>
+                <h4>cont title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius excepturi,
+                     fugiat accusamus unde reiciendis hic inventore asperiores fuga deserunt modi earum tenetur magnam provident praesentium blanditiis distinctio autem, rem quidem.</p>
+            </div>
+
+            <div>
+                <h4>cont title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius excepturi,
+                     fugiat accusamus unde reiciendis hic inventore asperiores fuga deserunt modi earum tenetur magnam provident praesentium blanditiis distinctio autem, rem quidem.</p>
+            </div>
+        </div><!-- .list end -->
+    </section><!-- .cont end -->
+</body>
+</html>
