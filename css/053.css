@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    text-decoration: none;
+}
+
+body {
+    background-color: #ddd;
+    line-height: 1;
+    color: #333;
+}
+
+*:focus {
+    /*  outline: 0; 모든 라인스타일을 없애줌 */
+    outline: 2px dotted #ff0000;
+}
+
+input::placeholder {
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.form {
+    max-width: 767px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+fieldset {
+    border: 0;
+}
+
+legend {
+    position: absolute;
+    left: -99999px;
+}
+
+.form h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.form .box {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.form .box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form .box input[type="text"],
+.form .box input[type="password"],
+.form .box input[type="button"] {
+    width: 100%;
+    height: 40px;
+    border: 3px solid #000000;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.form .box input[type="button"] {
+    background-color: rgb(255, 81, 0);
+    border: 0;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.form .box ul {
+    display: flex;
+    gap: 20px;
+}
+
+.form .box ul li {
+    display: flex;
+    align-items: center;
+}
+
+.form .box ul li label {
+    margin-bottom: none;
+    /* .form .box > abel 를 이용해 여백을 없애도 되지만 필요하다면 선택자를 잡아서 설정해주기. */
+}
+
+.form .box strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form .box select {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    /* 부수적으로 option은 스타일 적용이 안됨 */
+}
+
+.form .box .btn input {
+    width: calc(100% / 2 - 10px);
+    height: 40px;
+}
+
+.form .btn input[type="reset"] {
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.form .btn input[type="reset"]:active {
+    background-color: rgb(255, 0, 0);
+    /* 클릭했을때 색상변경 호버는 마우스 올렸을때 */
+}
+
+.form .btn input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.form .btn input[type="submit"]:active {
+    background-color: rgb(255, 0, 0);
+    /* 클릭했을때 색상변경 호버는 마우스 올렸을때 */
+}
+
+/* radio 버튼 스타일 변경 */
+.box input[type="radio"] {
+    display: none;
+}
+
+.box input[type="radio"]+label {
+    /* 뒤에 형제가 많을때 ~ 을 이용하면 다수의 형제가 선택이 되는 것 */
+    border: 1px solid #ff0000;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px
+}
+
+.box input[type="radio"]:checked+label {
+    background-color: aqua;
+    border: 1px solid #b87272;
+    color: #fff;
+}
